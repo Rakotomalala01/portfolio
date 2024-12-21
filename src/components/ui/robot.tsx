@@ -1,43 +1,68 @@
 import React, { useState, useEffect } from 'react';
-import './robot.css'
+import './robot.css';
 import SleepEffect from './sleep-effect';
+import { LuScanFace } from 'react-icons/lu';
+
 const RobotHead: React.FC = () => {
   const [isAsleep, setIsAsleep] = useState(true); // Default state: asleep
   const [position, setPosition] = useState(0); // Track vertical position
+  const [showSmile, setShowSmile] = useState(false); // Track smile state
 
   useEffect(() => {
-    let interval: NodeJS.Timeout | null = null;
+    let interval: number | null = null;
+    let timeout: number | null = null;
 
+    // Handle movement effect while asleep
     if (isAsleep) {
-      interval = setInterval(() => {
-        setPosition((prev) => (prev === 0 ? 10 : 0)); // Toggle position between 0 and 10px
-      }, 1000); // Slow movement every 1000ms (1 second)
+      interval = window.setInterval(() => {
+        setPosition((prev) => (prev === 0 ? 10 : 0)); // Toggle position
+      }, 1000);
+
+      // Wake up after 6 seconds
+      timeout = window.setTimeout(() => {
+        setIsAsleep(false);
+        setShowSmile(true);
+      }, 6000);
     } else {
-      if (interval) clearInterval(interval); // Stop movement when awake
-      setPosition(0); // Reset position
+      setPosition(0); // Reset position when awake
     }
 
+    // Cleanup intervals and timeouts
     return () => {
-      if (interval) clearInterval(interval); // Cleanup interval on unmount
+      if (interval) clearInterval(interval);
+      if (timeout) clearTimeout(timeout);
     };
   }, [isAsleep]); // React to changes in isAsleep
 
-  const toggleSleep = () => {
-    setIsAsleep(!isAsleep); // Toggle the isAsleep state on click
-  };
-
   return (
     <div
-      onClick={toggleSleep} // Toggle state on click
-      className="w-12 h-12 md:w-16 md:h-16 mt-10 rounded-full bg-gradient-to-br from-gray-300 via-gray-400 to-blue-500 shadow-lg border-4 border-gray-500 cursor-pointer flex items-center justify-center transition-transform duration-1000 ease-in-out relative"
+      className={`w-12 h-12 md:w-16 md:h-16 mt-10 rounded-full 
+        shadow-lg border-4 border-gray-500  
+        flex items-center justify-center 
+        transition-transform duration-1000 ease-in-out border-none 
+        transition-all duration-1000 ease-in-out
+        ${
+          showSmile
+            ? 'bg-gradient-to-br from-blue-500 via-blue-400 to-blue-300' // Gradient when smiling
+            : 'bg-gradient-to-br from-gray-300 via-gray-400 to-blue-500' // Default gradient
+        }
+        `}
       style={{
-        transform: `translateY(${position}px)`, // Move up and down
+        transform: `translateY(${position}px)`, // Smooth position transition
       }}
     >
-      {/* ZZZ effect */}
-      {isAsleep && (
-        <SleepEffect/>
-      )}
+      {/* ZZZ effect when asleep */}
+      {isAsleep && <SleepEffect />}
+
+      {/* Smooth smile transition */}
+      <div
+        className={`absolute transition-opacity duration-1000 ease-in-out ${
+          showSmile ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        {/* Responsive LuScanFace Icon */}
+        <LuScanFace className="w-8 h-8 md:w-12 md:h-12 text-secondary" />
+      </div>
     </div>
   );
 };
