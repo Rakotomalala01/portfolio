@@ -2,131 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ... */
-
+/* Base Theme Configurations */
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  /* Background and Foreground */
+  --background: 220 13% 18%; /* Dark gray editor background (#1E1E1E) */
+  --foreground: 210 10% 80%; /* Light gray text (#D4D4D4) */
+
+  /* Editor Colors */
+  --primary: 207 90% 55%; /* VSCode blue (#569CD6) */
+  --primary-foreground: 0 0% 98%; /* White text (#FFFFFF) */
+
+  /* Accent Colors */
+  --accent: 280 89% 70%; /* Purple (#C586C0) */
+  --accent-foreground: 0 0% 98%; /* White text (#FFFFFF) */
+
+  /* Syntax Highlighting */
+  --keyword: 207 90% 55%; /* Blue (#569CD6) */
+  --function: 173 58% 39%; /* Green (#4EC9B0) */
+  --variable: 210 10% 80%; /* Light gray (#D4D4D4) */
+  --string: 29 54% 61%; /* Orange (#CE9178) */
+  --comment: 120 1.5% 47%; /* Greenish gray (#6A9955) */
+  --number: 43 89% 70%; /* Yellow (#DCDCAA) */
+  --operator: 350 80% 70%; /* Pink (#C586C0) */
+
+  /* Error and Warning Colors */
+  --destructive: 0 87% 63%; /* Red (#F44747) */
+  --destructive-foreground: 0 0% 98%; /* White text */
+  --warning: 43 89% 70%; /* Yellow (#DCDCAA) */
+
+  /* Muted Colors */
+  --muted: 220 6% 20%; /* Dark gray (#252526) */
+  --muted-foreground: 210 5% 60%; /* Dimmed gray (#A6A6A6) */
+
+  /* Borders */
+  --border: 220 5% 25%; /* Slightly lighter border (#3C3C3C) */
+  --input: 220 5% 30%; /* Input fields (#404040) */
+
+  /* Focus and Rings */
+  --ring: 207 90% 55%; /* Blue focus ring (#569CD6) */
+
+  /* Shadows */
+  --shadow-blue-strong: 0 4px 10px rgba(59, 130, 246, 0.8); /* Strong blue glow */
+
+  /* Radius */
+  --radius: 0.5rem; /* Default border radius */
+}
+
+
+/* Light Mode Colors */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: 0 0% 100%; /* White */
+    --foreground: 0 0% 10%; /* Dark gray */
+    --primary: 207 90% 55%; /* Blue */
+    --accent: 43 89% 70%; /* Yellow */
+  }
+}
+
+/* Dark Mode */
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --primary: 0 0% 98%;
+  --accent: 280 65% 60%;
+}
+
+/* Body Styles */
+body {
+  @apply bg-background text-foreground;
+  font-family: var(--font-mono); /* Use Fira Code globally by default */
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Links */
+a {
+  @apply transition-colors duration-300 ease-in-out;
 }
 
+/* Strong Blue Light Hover Effect */
+a:hover {
+  @apply text-blue-500 shadow-lg;
+  box-shadow: var(--shadow-blue-strong);
+}
+
+/* Buttons */
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
-  }
-  .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-  }
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border-radius: var(--radius);
 }
 
 @layer base {

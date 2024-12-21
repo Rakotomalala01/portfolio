@@ -4,7 +4,14 @@ export default {
     content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
   	extend: {
+  		fontFamily: {
+			blackops: ['Black Ops One', 'cursive'],
+
+  			sans: ['Black Ops One', 'sans-serif'],
+  			mono: ['var(--font-mono)', 'monospace'],
+  		},
   		borderRadius: {
+  			DEFAULT: 'var(--radius, 0.5rem)',
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
@@ -49,10 +56,17 @@ export default {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+  			/* Syntax Highlighting */
+  			keyword: 'hsl(var(--keyword))',
+  			function: 'hsl(var(--function))',
+  			variable: 'hsl(var(--variable))',
+  			string: 'hsl(var(--string))',
+  			comment: 'hsl(var(--comment))',
+  			number: 'hsl(var(--number))',
+  			operator: 'hsl(var(--operator))'
   		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
 }
-
