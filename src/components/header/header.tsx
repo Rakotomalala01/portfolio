@@ -10,8 +10,6 @@ const Header = () => {
         {/* Logo */}
         <div className="font-blackops font-light text-white ">JOHARY RAKOTOMALALA</div>
 
-
-
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6 text-gray-800 font-blackops">
           <a href="#home" className={`${linkStyles}`}>
@@ -20,11 +18,17 @@ const Header = () => {
           <a href="#about" className={`${linkStyles}`}>
             About
           </a>
-          <a href="#portfolio" className={`${linkStyles}`}>
-            Portfolio
+          <a href="#project" className={`${linkStyles}`}>
+            Project
           </a>
           <a href="#contact" className={`${linkStyles}`}>
-            Contact
+            Works-experience
+          </a>
+          <a href="#project" className={`${linkStyles}`}>
+            Rewards
+          </a>
+          <a href="#project" className={`${linkStyles}`}>
+            contact
           </a>
         </nav>
 
