@@ -1,4 +1,5 @@
 import ContactList from "@/components/ui/contact-list";
+import MyCVDownloader from "@/components/ui/myCVDownloader";
 import { useState, useEffect, useMemo } from "react";
 
 const Home = () => {
@@ -67,7 +68,7 @@ const Home = () => {
       className="h-screen flex flex-col items-center justify-center text-center pb-10 bg-background text-white overflow-hidden"
     >
       <h1
-        className="text-4xl md:text-6xl font-blackops tracking-wider mb-"
+        className="text-4xl md:text-6xl font-blackops tracking-wider"
         aria-live="polite"
       >
         <span className="">{text}</span>
@@ -81,6 +82,7 @@ const Home = () => {
       <p className="text-lg md:text-xl font-light text-muted-foreground mb-6 max-w-2xl">
         {homeDescription}
       </p>
+      <MyCVDownloader/>
       <ContactList/>
       
     </section>
