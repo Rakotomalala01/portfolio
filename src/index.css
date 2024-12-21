@@ -18,9 +18,7 @@ html {
 
   /* Firefox Support */
   scrollbar-width: thin;
-  scrollbar-color: hsl(220, 13%, 18%) hsl(0, 0%, 0%);
-  scrollbar-color: hsl(207, 90%, 55%) hsl(220, 13%, 18%);
-
+  scrollbar-color: hsl(222, 36%, 10%) hsl(220, 13%, 18%);
 
 }
 
@@ -34,26 +32,17 @@ html {
 
   /* Background and Foreground */
   --background: 220 13% 18%; /* Dark gray editor background (#1E1E1E) */
-  --foreground: 210 10% 80%; /* Light gray text (#D4D4D4) */
 
   /* Editor Colors */
   --primary: 207 90% 55%; /* VSCode blue (#569CD6) */
   --primary-foreground: 0 0% 98%; /* White text (#FFFFFF) */
+  --secondary : 222, 36%, 10%;
+  --secondary-foreground: 210, 10%, 80%; /* White text (#FFFFFF) */
 
-  /* Accent Colors */
-  --accent: 280 89% 70%; /* Purple (#C586C0) */
-  --accent-foreground: 0 0% 98%; /* White text (#FFFFFF) */
 
   /* Syntax Highlighting */
   --keyword: 207 90% 55%; /* Blue (#569CD6) */
-  --function: 173 58% 39%; /* Green (#4EC9B0) */
-  --variable: 210 10% 80%; /* Light gray (#D4D4D4) */
-  --string: 29 54% 61%; /* Orange (#CE9178) */
-  --comment: 120 1.5% 47%; /* Greenish gray (#6A9955) */
-  --number: 43 89% 70%; /* Yellow (#DCDCAA) */
-  --operator: 350 80% 70%; /* Pink (#C586C0) */
 
-  /* Error and Warning Colors */
   --destructive: 0 87% 63%; /* Red (#F44747) */
   --destructive-foreground: 0 0% 98%; /* White text */
   --warning: 43 89% 70%; /* Yellow (#DCDCAA) */
@@ -68,7 +57,6 @@ html {
 
   /* Focus and Rings */
   --ring: 207 90% 55%; /* Blue focus ring (#569CD6) */
-
   /* Shadows */
   --shadow-blue-strong: 0 4px 10px rgba(59, 130, 246, 0.8); /* Strong blue glow */
 
@@ -87,14 +75,6 @@ html {
   }
 }
 
-/* Dark Mode */
-.dark {
-  --background: 240 10% 3.9%;
-  --foreground: 0 0% 98%;
-  --primary: 0 0% 98%;
-  --accent: 280 65% 60%;
-}
-
 /* Body Styles */
 body {
   @apply bg-background text-foreground;
@@ -107,23 +87,7 @@ body {
   min-height: 100vh;
 }
 
-/* Links */
-a {
-  @apply transition-colors duration-300 ease-in-out;
-}
 
-/* Strong Blue Light Hover Effect */
-a:hover {
-  @apply text-blue-500 shadow-lg;
-  box-shadow: var(--shadow-blue-strong);
-}
-
-/* Buttons */
-button {
-  background-color: var(--primary);
-  color: var(--primary-foreground);
-  border-radius: var(--radius);
-}
 
 @layer base {
   * {

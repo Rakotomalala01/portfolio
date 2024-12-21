@@ -1,21 +1,15 @@
 import React from "react";
+import HomeSection from "./sections/home-section";
 
 const Body = () => {
   return (
-    <main className="container mx-auto px-4 py-8 space-y-16 w-full bg-black">
+    <main className="container mx-auto px-4 py-8 space-y-16 w-full">
       {/* Home Section */}
       <section
         id="home"
-        className="h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900"
+        className="h-screen"
       >
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-gray-800 dark:text-white">
-            Welcome to My Portfolio
-          </h1>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-            I am a passionate software engineer creating innovative solutions.
-          </p>
-        </div>
+        <HomeSection/>
       </section>
 
       {/* About Section */}

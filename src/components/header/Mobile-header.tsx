@@ -12,7 +12,7 @@ import {
 
 // Reusable styles for mobile links
 const mobileLinkStyles =
-  "cursor-pointer hover:text-keyword w-full text-white hover:text-keyword transition-colors duration-300 ease-in-out hover:shadow-blue-500/80";
+  "cursor-pointer hover:text-keyword w-full text-white transition-colors duration-300 ease-in-out hover:[box-shadow:var(--shadow-blue-strong)]";
 
 const MobileHeader = () => {
   return (
