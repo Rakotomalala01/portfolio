@@ -12,38 +12,43 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 
+const mobileLinkStyles = "hover:text-keyword w-full text-white hover:text-keyword transition-colors duration-300 ease-in-out hover:shadow-blue-500/80";
+
+
 const MobileHeader = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline">Open</Button>
+        <Button variant='ghost' size='icon' className="text-4xl text-white">
+          ≡
+        </Button>
       </SheetTrigger>
-      <SheetContent side = "left">
+      <SheetContent className="font-blackops">
         <SheetHeader>
-          <SheetTitle>Edit profile</SheetTitle>
-          <SheetDescription>
-            Make changes to your profile here. Click save when you're done.
-          </SheetDescription>
         </SheetHeader>
-        <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
-              Name
-            </Label>
-            <Input id="name" value="Pedro Duarte" className="col-span-3" />
-          </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
-              Username
-            </Label>
-            <Input id="username" value="@peduarte" className="col-span-3" />
-          </div>
-        </div>
-        <SheetFooter>
+        <SheetTitle className="text-white text-2xl">Sections</SheetTitle>
+
+        
+        <nav className="grid gap-4 py-4">
           <SheetClose asChild>
-            <Button type="submit">Save changes</Button>
+            <a href="#home" className={`${mobileLinkStyles}`}>Home</a>
           </SheetClose>
-        </SheetFooter>
+          <SheetClose asChild>
+            <a href="#about" className={`${mobileLinkStyles}`}>About</a>
+          </SheetClose>
+          <SheetClose asChild>
+            <a href="#project" className={`${mobileLinkStyles}`}>Project</a>
+          </SheetClose>
+          <SheetClose asChild>
+            <a href="#contact" className={`${mobileLinkStyles}`}>Work Experiences</a>
+          </SheetClose>
+          <SheetClose asChild>
+            <a href="#rewards" className={`${mobileLinkStyles}`}>Rewards</a>
+          </SheetClose>
+          <SheetClose asChild>
+            <a href="#contact" className={`${mobileLinkStyles}`}>Contact</a>
+          </SheetClose>
+        </nav>
       </SheetContent>
     </Sheet>
   )

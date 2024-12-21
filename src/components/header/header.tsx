@@ -8,7 +8,7 @@ const Header = () => {
 
       <div className="container w-full mx-auto px-10 flex items-center justify-between  py-3">
         {/* Logo */}
-        <div className="font-blackops font-light text-white ">JOHARY RAKOTOMALALA</div>
+        <div className="font-blackops mr-auto font-light text-white ">JOHARY RAKOTOMALALA</div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6 text-gray-800 font-blackops">
@@ -22,7 +22,7 @@ const Header = () => {
             Project
           </a>
           <a href="#contact" className={`${linkStyles}`}>
-            Works-experience
+            Work Experience
           </a>
           <a href="#project" className={`${linkStyles}`}>
             Rewards
@@ -33,7 +33,7 @@ const Header = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <div  className="md:hidden text-2xl text-gray-800">
+        <div  className="md:hidden ml-auto text-2xl text-gray-800">
           <MobileHeader/>
         </div>
       </div>
