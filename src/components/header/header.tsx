@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import MobileHeader from "./Mobile-header";
 
 const Header = () => {
@@ -12,24 +13,61 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6 text-gray-800 font-blackops">
-          <a href="#home" className={`${linkStyles}`}>
+          <Link
+            to="home"
+            smooth={true}
+            duration={100}
+            offset={-70} // Adjust for sticky header height
+            spy={true} // Adds active class if section is visible
+            className={`${linkStyles}`}
+          >
             Home
-          </a>
-          <a href="#about" className={`${linkStyles}`}>
+          </Link>
+          <Link
+            to="about"
+            smooth={true}
+            duration={100}
+            offset={-70}
+            className={`${linkStyles}`}
+          >
             About
-          </a>
-          <a href="#project" className={`${linkStyles}`}>
+          </Link>
+          <Link
+            to="project"
+            smooth={true}
+            duration={100}
+            offset={-70}
+            className={`${linkStyles}`}
+          >
             Project
-          </a>
-          <a href="#contact" className={`${linkStyles}`}>
+          </Link>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={100}
+            offset={-400}
+            className={`${linkStyles}`}
+          >
             Work Experience
-          </a>
-          <a href="#project" className={`${linkStyles}`}>
+          </Link>
+          <Link
+            to="rewards"
+            smooth={true}
+            duration={100}
+            offset={-70}
+            className={`${linkStyles}`}
+          >
             Rewards
-          </a>
-          <a href="#project" className={`${linkStyles}`}>
-            contact
-          </a>
+          </Link>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={100}
+            offset={-70}
+            className={`${linkStyles}`}
+          >
+            Contact
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
