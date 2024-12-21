@@ -1,5 +1,6 @@
 import React from "react";
 import HomeSection from "./sections/home-section";
+import About from "./sections/about";
 
 const Body = () => {
   return (
@@ -13,15 +14,8 @@ const Body = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="bg-white dark:bg-gray-800 py-12">
-        <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-white">
-          About Me
-        </h2>
-        <p className="mt-6 text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          I am a freshly graduated software engineer with a strong passion for
-          building efficient and scalable applications. I specialize in web
-          development, React, and Tailwind CSS.
-        </p>
+      <section id="about" className="container mx-auto px-4 py-8 space-y-16 w-full">
+       <About/>
       </section>
 
       {/* Portfolio Section */}
