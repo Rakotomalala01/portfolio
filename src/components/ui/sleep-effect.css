@@ -1,0 +1,68 @@
+/* Keyframes for smooth diagonal flow */
+
+@keyframes moveZzz3 {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0); /* Start position */
+  }
+  25% {
+    opacity: 0.5;
+    transform: translate(5px, -10px); /* Slight movement */
+  }
+  50% {
+    opacity: 1;
+    transform: translate(10px, -15px); /* Move further */
+  }
+  75% {
+    opacity: 0.5;
+    transform: translate(15px, -20px); /* Continue the flow */
+  }
+  100% {
+    opacity: 0;
+    transform: translate(20px, -25px); /* End position */
+  }
+}
+
+/* Style for the whole ZZZ effect */
+.zzz-effect {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block; /* Removed flex-direction to avoid vertical stacking */
+}
+
+/* Style for each Z */
+.z-letter {
+  font-size: 1rem; /* Smaller font size */
+  font-weight: bold;
+  color: rgba(59, 130, 246, 0.8) ;
+  position: absolute; /* Absolute positioning to move Z's freely */
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Position the first Z with a starting diagonal placement */
+.z-letter:nth-child(1) {
+  bottom: 13px;
+  left: 12px;
+  animation: moveZzz3 1s ease-in-out infinite;
+}
+
+/* Position the second Z with a different starting diagonal placement */
+.z-letter:nth-child(2) {
+  bottom: -1px;
+  left: 5px; /* Starts further along in the diagonal */
+  animation: moveZzz3 1s ease-in-out infinite;
+  
+}
+
+/* Position the third Z with another starting diagonal placement */
+.z-letter:nth-child(3) 
+
+{
+  bottom: -16px ;
+  left: -5px;  /* Starts from a different point */
+  animation: moveZzz3 1s ease-in-out infinite;
+
+}

@@ -11,6 +11,22 @@
   }
 }
 
+/* Add this in your CSS file or within a <style> block */
+/* Add this in your main CSS file or within a style tag */
+
+/* Keyframes for the diagonal movement and fading out */
+@keyframes moveZzz {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0); /* Start from top-right */
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-30px, -30px); /* Move diagonally */
+  }
+}
+
+
 /* Smooth scrolling and global scrollbar */
 html {
   scroll-behavior: smooth;
