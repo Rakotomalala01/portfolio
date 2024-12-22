@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './robot.css';
 import SleepEffect from './sleep-effect';
 import { LuScanFace } from 'react-icons/lu';
+import Smile from './smile';
 
 const RobotHead: React.FC = () => {
   const [isAsleep, setIsAsleep] = useState(true); // Default state: asleep
@@ -14,9 +15,7 @@ const RobotHead: React.FC = () => {
 
     // Handle movement effect while asleep
     if (isAsleep) {
-      interval = window.setInterval(() => {
-        setPosition((prev) => (prev === 0 ? 10 : 0)); // Toggle position
-      }, 1000);
+      
 
       // Wake up after 6 seconds
       timeout = window.setTimeout(() => {
@@ -25,6 +24,9 @@ const RobotHead: React.FC = () => {
       }, 6000);
     } else {
       setPosition(0); // Reset position when awake
+      interval = window.setInterval(() => {
+        setPosition((prev) => (prev === 0 ?18 : 0)); // Toggle position
+      }, 1000);
     }
 
     // Cleanup intervals and timeouts
@@ -61,7 +63,8 @@ const RobotHead: React.FC = () => {
         }`}
       >
         {/* Responsive LuScanFace Icon */}
-        <LuScanFace className="w-8 h-8 md:w-12 md:h-12 text-secondary" />
+        <Smile className="w-16 h-10 md:w-15 md:h-20 text-blue-700" />
+
       </div>
     </div>
   );
