@@ -1,6 +1,6 @@
 import React from 'react';
 
-const chatBubbleStyles = "hover:text-keyword bg-secondary text-white [box-shadow:var(--shadow-blue-strong)] px-3";
+const chatBubbleStyles = "bg-secondary text-white [box-shadow:var(--shadow-blue-strong)] px-3";
 
 
 

@@ -10,7 +10,7 @@ const RobotHead: React.FC = () => {
   const [showChat, setShowChat] = useState(false); // Track chat visibility
 
   const bubbleAndChatStyles =
-    'transition-all duration-1000 ease-in-out'; // Unified transition styles
+    'transition-all duration-1000 ease-in-out '; // Unified transition styles
 
   useEffect(() => {
     let interval: number | null = null;
@@ -79,7 +79,7 @@ const RobotHead: React.FC = () => {
         style={{ transform: `translateY(${position}px)` }} // Sync vertical movement
       >
         {/* Small bubble */}
-        <div className="w-3 h-3 bg-secondary rounded-tr-full flex items-center justify-center border-none shadow-lg ml-3 mt-2"></div>
+        <div className="w-3 h-3 [box-shadow:var(--shadow-blue-strong)] bg-secondary rounded-tr-full flex items-center justify-center border-none shadow-lg ml-3 mt-2"></div>
 
         {/* Main Chat */}
         <RobotChat message={'Hello! How can I assist you today?'} />
