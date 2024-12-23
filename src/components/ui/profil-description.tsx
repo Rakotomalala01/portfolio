@@ -59,7 +59,7 @@ const ProfileDescription = () => {
     }, []);
   return (
     <><h1
-          className="text-4xl md:text-6xl font-blackops tracking-wider"
+          className="text-2xl md:text-6xl font-blackops tracking-wider"
           aria-live="polite"
       >
           <span className="">{text}</span>
@@ -69,7 +69,7 @@ const ProfileDescription = () => {
           >
               |
           </span>
-      </h1><p className="text-lg md:text-xl font-light text-muted-foreground mb-6 max-w-2xl">
+      </h1><p className="text-sm md:text-xl font-light text-muted-foreground mb-6 max-w-2xl">
               {homeDescription}
           </p></>
   );

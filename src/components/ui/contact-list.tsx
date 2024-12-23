@@ -1,6 +1,7 @@
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
-const iconClass = "flex items-center justify-center rounded-md w-12 h-12 bg-secondary text-white hover:scale-[1.3] transition-transform duration-300 hover:[box-shadow:var(--shadow-blue-strong)] shadow-lg hover:text-keyword";
+const iconClass =
+  "flex items-center justify-center rounded-md w-7 h-7 sm:w-12 sm:h-12 bg-secondary text-white hover:scale-[1.3] transition-transform duration-300 hover:[box-shadow:var(--shadow-blue-strong)] shadow-lg hover:text-keyword";
 
 const ContactList = () => {
   return (
@@ -12,7 +13,7 @@ const ContactList = () => {
         rel="noopener noreferrer"
         className={iconClass}
       >
-        <FaGithub size={24} />
+        <FaGithub className="h-5 w-5 sm:h-8 sm:w-8" />
       </a>
 
       {/* LinkedIn */}
@@ -22,7 +23,7 @@ const ContactList = () => {
         rel="noopener noreferrer"
         className={iconClass}
       >
-        <FaLinkedin size={24} />
+        <FaLinkedin className="h-5 w-5 sm:h-8 sm:w-8" />
       </a>
 
       {/* Email */}
@@ -32,7 +33,7 @@ const ContactList = () => {
         rel="noopener noreferrer"
         className={iconClass}
       >
-        <FaEnvelope size={24} />
+        <FaEnvelope className="h-5 w-5 sm:h-8 sm:w-8" />
       </a>
     </div>
   );

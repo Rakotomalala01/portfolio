@@ -95,7 +95,7 @@ const RobotHead: React.FC = () => {
       {/* Robot Head */}
       <div
         onClick={handleChatToggle}
-        className={`w-12 h-12 md:w-16 md:h-16 rounded-full shadow-lg border-4 border-gray-500 flex items-center justify-center transition-transform duration-1000 ease-in-out border-none ${
+        className={`w-8 h-8 md:w-16 md:h-16 rounded-full shadow-lg border-4 border-gray-500 flex items-center justify-center transition-transform duration-1000 ease-in-out border-none ${
           showSmile
             ? `bg-gradient-to-br from-blue-600 via-blue-400 to-blue-100 cursor-pointer ${
                 !isAsleep ? '[box-shadow:var(--shadow-blue-strong)]' : ''
@@ -118,20 +118,22 @@ const RobotHead: React.FC = () => {
 
       {/* Chat Bubble and Main Chat */}
       <div
-        className={`relative font-blackops flex flex-col items-center ${bubbleAndChatStyles} ${
-          showChat
-            ? 'opacity-100 translate-y-0 pointer-events-auto'
-            : 'opacity-0 translate-y-5 pointer-events-none'
-        }`}
-        style={{ transform: `translateY(${position}px)` }} // Sync vertical movement
-      >
-        {/* Small bubble */}
-        <div className="w-3 h-3 [box-shadow:var(--shadow-blue-strong)] bg-secondary rounded-tr-full flex items-center justify-center border-none shadow-lg ml-3 mt-2"></div>
+  className={`relative font-blackops flex flex-col items-center ${bubbleAndChatStyles} ${
+    showChat
+      ? 'opacity-100 translate-y-0 pointer-events-auto'
+      : 'opacity-0 translate-y-5 pointer-events-none'
+  }`}
+  style={{ transform: `translateY(${position}px)` }} // Sync vertical movement
+>
+  {/* Small bubble */}
+  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 [box-shadow:var(--shadow-blue-strong)] bg-secondary rounded-tr-full flex items-center justify-center border-none shadow-lg ml-2 sm:ml-3 mt-1.5 sm:mt-2"></div>
 
-        {/* Main Chat */}
-        <RobotChat message={messages[messageIndex]} />
-      </div>
-    </div>
+  {/* Main Chat */}
+  <div className="scale-90 sm:scale-100">
+    <RobotChat message={messages[messageIndex]} />
+  </div>
+</div>
+</div>
   );
 };
 
