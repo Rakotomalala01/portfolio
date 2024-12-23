@@ -18,12 +18,12 @@ const RobotHead: React.FC = () => {
 
   // List of messages
   const messages = [
-    "My creator says thanks for visiting his portfolio!",
-    "I can still chat! Click on me again.",
-    "The engineer behind me is always exploring and learning new technologies.\nDriven by curiosity, he turns ideas into powerful applications.",
-    "Ready to turn ideas into reality? Go connect and create something amazing!",
-    "Fun fact: I was built using React, TypeScript, and Tailwind CSS!",
-    "Thanks for spending time here. I hope you find this portfolio inspiring! \n Enjoy your visit!", // Final message
+    "Thanks for visiting my creator's portfolio!",
+    "Want to chat? Click me again!",
+    "My engineer loves exploring new technologies!",
+    "Ready to create something amazing? Reach out!",
+    "I’m built with React, TypeScript, and Tailwind CSS!",
+    "Thanks for visiting! Hope you find this inspiring!",
   ];
   
   useEffect(() => {
