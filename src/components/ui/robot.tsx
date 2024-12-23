@@ -8,10 +8,24 @@ const RobotHead: React.FC = () => {
   const [position, setPosition] = useState(0); // Track vertical position
   const [showSmile, setShowSmile] = useState(false); // Track smile state
   const [showChat, setShowChat] = useState(false); // Track chat visibility
+  const [firstTime, setFirstTime] = useState(true); // Track chat visibility
+
+  const [messageIndex, setMessageIndex] = useState(0); // Track the current message index
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false); // Disable button temporarily
 
   const bubbleAndChatStyles =
     'transition-all duration-1000 ease-in-out '; // Unified transition styles
 
+  // List of messages
+  const messages = [
+    "My creator says thanks for visiting his portfolio!",
+    "I can still chat! Click on me again.",
+    "The engineer behind me is always exploring and learning new technologies.\nDriven by curiosity, he turns ideas into powerful applications.",
+    "Ready to turn ideas into reality? Go connect and create something amazing!",
+    "Fun fact: I was built using React, TypeScript, and Tailwind CSS!",
+    "Thanks for spending time here. I hope you find this portfolio inspiring! \n Enjoy your visit!", // Final message
+  ];
+  
   useEffect(() => {
     let interval: number | null = null;
     let timeout: number | null = null;
@@ -36,13 +50,43 @@ const RobotHead: React.FC = () => {
     };
   }, [isAsleep]);
 
-  // Handle click event to show chat
-  const handleChatToggle = () => {
-    if (!isAsleep) {
+  // Handle click event to show the next message
+
+  const showChatOnClick = (reactivate_button: boolean = true ) => {
+    if (!isAsleep && !isButtonDisabled) {
       setShowChat(true); // Show chat when clicked
+      setIsButtonDisabled(true); // Disable the button immediately
 
       // Hide chat after 5 seconds
-      setTimeout(() => setShowChat(false), 5000);
+      setTimeout(() => {
+        setShowChat(false);
+        
+        // Reactivate the button 1 second after the chat disappears (total 6 seconds)
+        setTimeout(() => {
+          if (reactivate_button)  setIsButtonDisabled(false)
+          setMessageIndex((prevIndex) =>
+            prevIndex < messages.length - 1 ? prevIndex + 1 : prevIndex
+          );
+
+        },800);
+      }, 5000);
+
+      // Move to the next message
+      
+    }
+    
+  }
+  const handleChatToggle = () => {
+    if (firstTime){
+      showChatOnClick(false);
+      setTimeout(()=>{
+        showChatOnClick()
+
+      }, 6200)
+      setFirstTime(false);
+    }
+    else{
+      showChatOnClick();
     }
   };
 
@@ -53,10 +97,13 @@ const RobotHead: React.FC = () => {
         onClick={handleChatToggle}
         className={`w-12 h-12 md:w-16 md:h-16 rounded-full shadow-lg border-4 border-gray-500 flex items-center justify-center transition-transform duration-1000 ease-in-out border-none ${
           showSmile
-            ? 'bg-gradient-to-br from-blue-600 via-blue-400 to-blue-100 cursor-pointer hover:[box-shadow:var(--shadow-blue-strong)]'
+            ? `bg-gradient-to-br from-blue-600 via-blue-400 to-blue-100 cursor-pointer ${
+                !isAsleep ? '[box-shadow:var(--shadow-blue-strong)]' : ''
+              }`
             : 'bg-gradient-to-br from-gray-300 via-gray-400 to-blue-500'
-        }`}
+        } ${isButtonDisabled ? 'cursor-not-allowed' : ''}`}
         style={{ transform: `translateY(${position}px)` }}
+        
       >
         {isAsleep && <SleepEffect />}
 
@@ -82,8 +129,7 @@ const RobotHead: React.FC = () => {
         <div className="w-3 h-3 [box-shadow:var(--shadow-blue-strong)] bg-secondary rounded-tr-full flex items-center justify-center border-none shadow-lg ml-3 mt-2"></div>
 
         {/* Main Chat */}
-        <RobotChat message="My creator says thanks for visiting my portfolio!" />
-
+        <RobotChat message={messages[messageIndex]} />
       </div>
     </div>
   );
