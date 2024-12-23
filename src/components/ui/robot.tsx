@@ -9,8 +9,8 @@ const RobotHead: React.FC = () => {
   const [showSmile, setShowSmile] = useState(false); // Track smile state
   const [showChat, setShowChat] = useState(false); // Track chat visibility
 
-  const smallBubbleStyles =
-    'w-3 h-3 bg-secondary rounded-tr-full flex items-center justify-center border-none shadow-lg ml-3 mt-2';
+  const bubbleAndChatStyles =
+    'transition-all duration-1000 ease-in-out'; // Unified transition styles
 
   useEffect(() => {
     let interval: number | null = null;
@@ -38,9 +38,11 @@ const RobotHead: React.FC = () => {
 
   // Handle click event to show chat
   const handleChatToggle = () => {
-    // Prevent chat toggle if the robot is asleep
     if (!isAsleep) {
-      setShowChat(true); // Display chat only if awake
+      setShowChat(true); // Show chat when clicked
+
+      // Hide chat after 5 seconds
+      setTimeout(() => setShowChat(false), 5000);
     }
   };
 
@@ -48,7 +50,7 @@ const RobotHead: React.FC = () => {
     <div className="flex flex-col items-center mt-6">
       {/* Robot Head */}
       <div
-        onClick={handleChatToggle} // Add click event here
+        onClick={handleChatToggle}
         className={`w-12 h-12 md:w-16 md:h-16 rounded-full shadow-lg border-4 border-gray-500 flex items-center justify-center transition-transform duration-1000 ease-in-out border-none ${
           showSmile
             ? 'bg-gradient-to-br from-blue-600 via-blue-400 to-blue-100 cursor-pointer hover:[box-shadow:var(--shadow-blue-strong)]'
@@ -56,10 +58,8 @@ const RobotHead: React.FC = () => {
         }`}
         style={{ transform: `translateY(${position}px)` }}
       >
-        {/* ZZZ effect when asleep */}
         {isAsleep && <SleepEffect />}
 
-        {/* Smooth smile transition */}
         <div
           className={`absolute transition-opacity duration-1000 ease-in-out ${
             showSmile ? 'opacity-100' : 'opacity-0 pointer-events-none'
@@ -69,25 +69,21 @@ const RobotHead: React.FC = () => {
         </div>
       </div>
 
-      {/* Robot Chat */}
-      {showChat && (
-        <>
-          <div
-            className={`${smallBubbleStyles} transition-transform duration-1000 ease-in-out`}
-            style={{ transform: `translateY(${position}px)` }}
-          ></div>
-          <div
-            className={`transition-transform duration-1000 ease-in-out ${
-              showChat
-                ? 'translate-y-0 opacity-100'
-                : '-translate-y-10 opacity-0'
-            }`}
-            style={{ transform: `translateY(${position}px)` }}
-          >
-            <RobotChat message={'Hello! How can I assist you today?'} />
-          </div>
-        </>
-      )}
+      {/* Chat Bubble and Main Chat */}
+      <div
+        className={`relative flex flex-col items-center ${bubbleAndChatStyles} ${
+          showChat
+            ? 'opacity-100 translate-y-0 pointer-events-auto'
+            : 'opacity-0 translate-y-5 pointer-events-none'
+        }`}
+        style={{ transform: `translateY(${position}px)` }} // Sync vertical movement
+      >
+        {/* Small bubble */}
+        <div className="w-3 h-3 bg-secondary rounded-tr-full flex items-center justify-center border-none shadow-lg ml-3 mt-2"></div>
+
+        {/* Main Chat */}
+        <RobotChat message={'Hello! How can I assist you today?'} />
+      </div>
     </div>
   );
 };
