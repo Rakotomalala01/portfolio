@@ -71,7 +71,7 @@ const RobotHead: React.FC = () => {
 
       {/* Chat Bubble and Main Chat */}
       <div
-        className={`relative flex flex-col items-center ${bubbleAndChatStyles} ${
+        className={`relative font-blackops flex flex-col items-center ${bubbleAndChatStyles} ${
           showChat
             ? 'opacity-100 translate-y-0 pointer-events-auto'
             : 'opacity-0 translate-y-5 pointer-events-none'
@@ -82,7 +82,8 @@ const RobotHead: React.FC = () => {
         <div className="w-3 h-3 [box-shadow:var(--shadow-blue-strong)] bg-secondary rounded-tr-full flex items-center justify-center border-none shadow-lg ml-3 mt-2"></div>
 
         {/* Main Chat */}
-        <RobotChat message={'Hello! How can I assist you today?'} />
+        <RobotChat message="My creator says thanks for visiting my portfolio!" />
+
       </div>
     </div>
   );
