@@ -27,7 +27,7 @@ const Home = () => {
       {/* Arrow Button */}
       <button
         onClick={scrollToNextSection}
-        className="mt-4 animate-bounce text-white text-2xl sm:text-3xl"
+        className="absolute bottom-[5.5rem] animate-bounce text-white text-2xl sm:text-3xl"
       >
         <FaChevronDown />
       </button>

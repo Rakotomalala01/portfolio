@@ -129,7 +129,7 @@ const RobotHead: React.FC = () => {
   <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 [box-shadow:var(--shadow-blue-strong)] bg-secondary rounded-tr-full flex items-center justify-center border-none shadow-lg ml-2 sm:ml-3 mt-1.5 sm:mt-2"></div>
 
   {/* Main Chat */}
-  <div className="scale-90 sm:scale-100">
+  <div className="scale-90 sm:scale-95">
     <RobotChat message={messages[messageIndex]} />
   </div>
 </div>
