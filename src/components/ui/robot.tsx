@@ -95,7 +95,7 @@ const RobotHead: React.FC = () => {
       {/* Robot Head */}
       <div
         onClick={handleChatToggle}
-        className={`w-8 h-8 md:w-16 md:h-16 rounded-full shadow-lg border-4 border-gray-500 flex items-center justify-center transition-transform duration-1000 ease-in-out border-none ${
+        className={`w-10 h-10 md:w-16 md:h-16 rounded-full shadow-lg border-4 border-gray-500 flex items-center justify-center transition-transform duration-1000 ease-in-out border-none ${
           showSmile
             ? `bg-gradient-to-br from-blue-600 via-blue-400 to-blue-100 cursor-pointer ${
                 !isAsleep ? '[box-shadow:var(--shadow-blue-strong)]' : ''

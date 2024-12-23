@@ -28,7 +28,7 @@ const SpaceshipChase: React.FC = () => {
           }
 
           .animate-fadeInOut {
-            animation: fadeInOut 8s ease-in-out infinite;
+            animation: fadeInOut 5s ease-in-out infinite;
           }
 
           .move {

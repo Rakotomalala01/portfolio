@@ -35,7 +35,6 @@ const Home = () => {
 
   const [colorIndex, setColorIndex] = useState(0);
 
-  // Generate random positions & durations for falling dots
   const [positions] = useState(() =>
     [...Array(60)].map(() => ({
       left: Math.random() * 100,
@@ -63,7 +62,7 @@ const Home = () => {
       "
     >
       {/* F A L L I N G   D O T S  */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none ">
         {positions.map((pos, i) => (
           <div
             key={i}
