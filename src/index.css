@@ -43,7 +43,6 @@ html {
 /* Base Theme Configurations */
 :root {
   /* Fonts */
-  --font-sans: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   --font-mono: 'Fira Code', monospace;
 
   /* Background and Foreground */
@@ -51,28 +50,16 @@ html {
 
   /* Editor Colors */
   --primary: 207 90% 55%; /* VSCode blue (#569CD6) */
-  --primary-foreground: 0 0% 98%; /* White text (#FFFFFF) */
   --secondary : 222, 36%, 10%;
-  --secondary-foreground: 210, 10%, 80%; /* White text (#FFFFFF) */
 
 
   /* Syntax Highlighting */
   --keyword: 207 90% 55%; /* Blue (#569CD6) */
 
   --destructive: 0 87% 63%; /* Red (#F44747) */
-  --destructive-foreground: 0 0% 98%; /* White text */
-  --warning: 43 89% 70%; /* Yellow (#DCDCAA) */
 
-  /* Muted Colors */
-  --muted: 220 6% 20%; /* Dark gray (#252526) */
   --muted-foreground: 210 5% 60%; /* Dimmed gray (#A6A6A6) */
 
-  /* Borders */
-  --border: 220 5% 25%; /* Slightly lighter border (#3C3C3C) */
-  --input: 220 5% 30%; /* Input fields (#404040) */
-
-  /* Focus and Rings */
-  --ring: 207 90% 55%; /* Blue focus ring (#569CD6) */
   /* Shadows */
   --shadow-blue-strong: 0 4px 10px rgba(59, 130, 246, 0.8); /* Strong blue glow */
 
