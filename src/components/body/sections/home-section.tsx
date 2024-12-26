@@ -41,7 +41,7 @@ const Home = () => {
       {/* S C R O L L   D O W N   B U T T O N */}
       <button
         onClick={scrollToNextSection}
-        className="absolute bottom-[5.5rem] animate-bounce text-white text-2xl sm:text-3xl"
+        className="absolute bottom-[10rem] animate-bounce text-white text-2xl sm:text-3xl"
       >
         <FaChevronDown />
       </button>
