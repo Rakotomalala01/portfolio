@@ -1,11 +1,32 @@
 import React from "react";
 import HomeSection from "./sections/home-section";
 import About from "./sections/about";
+import FallingDots from "../ui/falling-dot";
 
 const Body = () => {
+  const colors = [
+    "bg-background",
+    "bg-[#569CD6]",
+    "bg-[#9CDCFE]",
+    "bg-[#4EC9B0]",
+    "bg-[#B5CEA8]",
+    "bg-[#C586C0]",
+    "bg-[#D7BA7D]",
+    "bg-[#CE9178]",
+    "bg-[#DCDCAA]",
+    "bg-[#F44747]",
+    "bg-[#646695]",
+    "bg-[#D16969]",
+    "bg-[#F2C272]",
+    "bg-[#8BD1FA]",
+    "bg-[#DAB894]",
+    "bg-[#A074C4]",
+  ];
   return (
     <main className="w-full mx-auto py-8 space-y-16 w-full">
       {/* Home Section */}
+      <FallingDots colors={colors} count={60} />
+
 
       <HomeSection/>
 
