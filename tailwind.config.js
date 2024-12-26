@@ -18,6 +18,8 @@ export default {
 		colors: {
 		  background: 'hsl(var(--background))',
 		  foreground: 'hsl(var(--foreground))',
+		  
+
 		  card: {
 			DEFAULT: 'hsl(var(--card))',
 			foreground: 'hsl(var(--card-foreground))'
@@ -63,6 +65,8 @@ export default {
 		  },
 		  /* Syntax Highlighting */
 		  keyword: 'hsl(var(--keyword))',
+		  institution: 'hsl(var(--institution-color))',
+
 		  function: 'hsl(var(--function))',
 		  variable: 'hsl(var(--variable))',
 		  string: 'hsl(var(--string))',

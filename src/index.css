@@ -52,6 +52,8 @@ html {
   --primary: 207 90% 55%; /* VSCode blue (#569CD6) */
   --secondary : 222, 36%, 10%;
 
+  --institution-color: 213, 50%, 63%;
+
 
   /* Syntax Highlighting */
   --keyword: 207 90% 55%; /* Blue (#569CD6) */

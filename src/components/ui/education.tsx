@@ -1,8 +1,6 @@
 import React from 'react';
 import EducationDescription from './education-description';
 import { IoSchoolOutline } from "react-icons/io5";
-import { GiFrance } from "react-icons/gi";
-import { SiAircanada } from "react-icons/si";
 import MadagascarMap from './madagascar-icon';
 import FranceMap from './france-icon';
 import canadaMap from './canada-icon';
@@ -17,27 +15,32 @@ interface EducationItem {
 
 const educationData: EducationItem[] = [
     {
-      year: '2020',
-      degree: 'High School Diploma',
-      institution: 'River Valley High School',
-      description: 'Graduated with honors in science and mathematics.',
-      location: 'madagascar',
+        degree: "Bachelor’s in Software Engineering",
+        institution: "Polytechnique Montréal",
+        description: "Focused on software engineering principles, AI, machine learning, and data science methodologies.",
+        location: "canada",
+        year: ''
     },
     {
-      year: '2022',
-      degree: 'Associate Degree in Computer Science',
-      institution: 'Paris Tech College',
-      description: 'Specialized in algorithms and data structures.',
-      location: 'france',
-    },
+        year: "",
+        degree: "Preparatory Class for Engineering Schools in Math, Physics, and Engineering Science",
+        institution: "Lycée Ste Croix St Euverte",
+        description: "Prepared for advanced engineering studies with a focus on mathematics, physics, and engineering sciences.",
+        location: "france"
+      }, 
     {
-      year: '2024',
-      degree: 'B.Sc. in Software Engineering',
-      institution: 'Tech University',
-      description: 'Focused on full-stack web development and AI technologies.',
-      location: 'canada',
-    },
-  ];
+        year: "",
+        degree: "Scientific Baccalaureate",
+        institution: "Collège St Michel Amparibe",
+        description: "Focused on mathematics, physics, and natural sciences in the scientific stream.",
+        location: "madagascar"
+      },
+
+
+
+
+  ]
+  
 
 const SchoolTitle = () => {
     return (
