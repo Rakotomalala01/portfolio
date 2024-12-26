@@ -6,12 +6,8 @@ const Body = () => {
   return (
     <main className="w-full mx-auto py-8 space-y-16 w-full">
       {/* Home Section */}
-      <section
-        id="home"
-        className="h-screen"
-      >
-        <HomeSection/>
-      </section>
+
+      <HomeSection/>
 
       {/* About Section */}
        <About/>
