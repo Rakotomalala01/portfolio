@@ -4,9 +4,9 @@ import MobileHeader from "./Mobile-header";
 const Header = () => {
   const linkStyles = "hover:text-keyword text-white transition-colors duration-300 ease-in-out hover:[box-shadow:var(--shadow-blue-strong)] px-3";
   return (
-    <header className="sticky top-0 z-50 bg-background">
+    <header className="sticky top-0 z-50 bg-background [box-shadow:var(--shadow-blue-strong)]">
 
-      <div className="container w-full mx-auto px-10 flex items-center justify-between  py-3">
+      <div className="container w-full mx-auto px-10 flex items-center justify-between  py-3 ">
         {/* Logo */}
         <div className="font-blackops mr-auto font-light text-white ">JOHARY RAKOTOMALALA</div>
 
