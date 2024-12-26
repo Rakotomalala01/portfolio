@@ -14,9 +14,7 @@ const Body = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="container mx-auto px-4 py-8 space-y-16 w-full">
        <About/>
-      </section>
 
       {/* Portfolio Section */}
       <section id="portfolio" className="bg-gray-100 dark:bg-gray-900 py-12">
