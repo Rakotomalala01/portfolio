@@ -8,10 +8,10 @@ const SpaceshipChase: React.FC = () => {
         {`
           @keyframes mooveKeyframes {
             0% {
-              transform: translateX(0vh);
+              transform: translateX(0vw);
             }
             100% {
-              transform: translateX(140vh);
+              transform: translateX(120vw);
             }
           }
 

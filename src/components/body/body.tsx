@@ -4,7 +4,7 @@ import About from "./sections/about";
 
 const Body = () => {
   return (
-    <main className="container mx-auto px-4 py-8 space-y-16 w-full">
+    <main className="w-full mx-auto py-8 space-y-16 w-full">
       {/* Home Section */}
       <section
         id="home"
