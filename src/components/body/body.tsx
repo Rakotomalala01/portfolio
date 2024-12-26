@@ -1,4 +1,3 @@
-import React from "react";
 import HomeSection from "./sections/home-section";
 import About from "./sections/about";
 import FallingDots from "../ui/falling-dot";
@@ -23,12 +22,15 @@ const Body = () => {
     "bg-[#A074C4]",
   ];
   return (
-    <main className="w-full mx-auto py-8 space-y-16 w-full">
+    <main className="w-full mx-auto py-8  w-full">
       {/* Home Section */}
       <FallingDots colors={colors} count={60} />
 
 
       <HomeSection/>
+      <div className="h-[100px] bg-gradient-to-b from-[hsl(220,13%,18%)] to-[hsl(222,36%,10%)]"></div>
+
+
 
       {/* About Section */}
        <About/>
