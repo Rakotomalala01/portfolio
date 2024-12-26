@@ -46,7 +46,7 @@ const FallingDots: React.FC<FallingDotsProps> = ({
   }, [colors.length]);
 
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden z-10">
+    <div className="fixed inset-0 pointer-events-none overflow-hidden z-[10]">
       {positions.map((pos, i) => (
         <div
           key={i}
