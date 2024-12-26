@@ -8,10 +8,10 @@ const Header = () => {
 
       <div className="container w-full mx-auto px-10 flex items-center justify-between  py-3 ">
         {/* Logo */}
-        <div className="font-blackops mr-auto font-light text-white ">JOHARY RAKOTOMALALA</div>
+        <div className="font-blackops font-light text-white ">JOHARY RAKOTOMALALA</div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6 text-gray-800 font-blackops">
+        <nav className="hidden md:flex space-x-6 md:space-x-1 text-gray-800 font-blackops">
           <Link
             to="home"
             smooth={true}
