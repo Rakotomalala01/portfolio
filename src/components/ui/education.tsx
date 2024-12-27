@@ -28,16 +28,6 @@ const educationData: EducationItem[] = [
         description: "Prepared for advanced engineering studies with a focus on mathematics, physics, and engineering sciences.",
         location: "france"
       }, 
-    {
-        year: "",
-        degree: "Scientific Baccalaureate",
-        institution: "Collège St Michel Amparibe",
-        description: "Focused on mathematics, physics, and natural sciences in the scientific stream.",
-        location: "madagascar"
-      },
-
-
-
 
   ]
   
