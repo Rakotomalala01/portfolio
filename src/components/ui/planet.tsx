@@ -69,7 +69,7 @@ const Planet: FC<PlanetProps> = ({
             {icon}
           </div>
         )}
-        {text && <span className="text-white text-xs mt-1 text-center">{text}</span>}
+        {text && <span className="text-white font-blackops tracking-wider text-xs mt-1 text-center">{text}</span>}
       </div>
     </>
   );

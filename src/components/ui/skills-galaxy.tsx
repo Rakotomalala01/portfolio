@@ -26,20 +26,16 @@ import Planet22 from '../../../docs/assets/img/planet_22.png';
 
 
 import { 
-  SiPython,  SiCplusplus, SiJavascript, SiTypescript, SiR, SiDart, 
-  SiGnubash, SiTailwindcss, SiExpress, SiNestjs, SiPostgresql, 
-  SiMongodb, SiFirebase, SiOracle,  
-  SiTensorflow, SiPytorch, SiScikitlearn, SiKeras, SiJira, SiVmware, 
-  SiUnrealengine, SiFlutter, SiGraphql, 
-  SiGooglecolab,
-  SiGitlab,
-  SiJupyter,
-  SiNumpy
+  SiPython,  SiCplusplus, SiJavascript, SiTypescript, SiDart, 
+  SiTailwindcss, SiExpress, SiNestjs, SiPostgresql, 
+  SiMongodb, SiFirebase,
+  SiTensorflow,  
+  SiFlutter, 
 } from 'react-icons/si';
 
 import { 
   FaJava, FaHtml5, FaCss3Alt, FaReact, FaAngular, FaNodeJs, FaAws, 
-  FaDocker, FaGitAlt, FaGithub, FaFigma
+  FaDocker, FaFigma
 } from 'react-icons/fa';
 
 interface Star {
@@ -55,41 +51,42 @@ interface EducationGalaxyProps {
 const EducationGalaxy: FC<EducationGalaxyProps> = ({ stars }) => {
   const planets = [
     // Programming
-    { id: 1, text: 'Python', icon: <SiPython style={{ color: '#3776AB' }} />, top: 5, left: 10, size: 80, fadeInDuration: 1000, backgroundImage: Planet1 },
-    { id: 2, text: 'Java', icon: <FaJava style={{ color: '#007396' }} />, top: 15, left: 30, size: 70, fadeInDuration: 1200, backgroundImage: Planet2 },
-    { id: 3, text: 'C++', icon: <SiCplusplus style={{ color: '#00599C' }} />, top: 25, left: 50, size: 75, fadeInDuration: 1400, backgroundImage: Planet3 },
-    { id: 4, text: 'JavaScript', icon: <SiJavascript style={{ color: '#F7DF1E' }} />, top: 35, left: 70, size: 85, fadeInDuration: 1600, backgroundImage: Planet4 },
-    { id: 5, text: 'TypeScript', icon: <SiTypescript style={{ color: '#3178C6' }} />, top: 45, left: 90, size: 70, fadeInDuration: 1800, backgroundImage: Planet5 },
-    { id: 6, text: 'Dart', icon: <SiDart style={{ color: '#0175C2' }} />, top: 55, left: 10, size: 80, fadeInDuration: 1000, backgroundImage: Planet6 },
+    { id: 1, text: 'Python', icon: <SiPython style={{ color: '#3776AB' }} />, top: 5, left: 10, size: 120, fadeInDuration: 500, backgroundImage: Planet1 },
+    { id: 2, text: 'Java', icon: <FaJava style={{ color: '#007396' }} />, top: 10, left: 25, size: 120, fadeInDuration: 1500, backgroundImage: Planet2 },
+    { id: 3, text: 'C++', icon: <SiCplusplus style={{ color: '#00599C' }} />, top: 5, left: 40, size: 120, fadeInDuration: 2500, backgroundImage: Planet3 },
+    { id: 4, text: 'JavaScript', icon: <SiJavascript style={{ color: '#F7DF1E' }} />, top: 10, left: 55, size: 120, fadeInDuration: 3500, backgroundImage: Planet4 },
+    { id: 5, text: 'TypeScript', icon: <SiTypescript style={{ color: '#3178C6' }} />, top: 5, left: 70, size: 120, fadeInDuration: 4500, backgroundImage: Planet5 },
+    { id: 6, text: 'Dart', icon: <SiDart style={{ color: '#0175C2' }} />, top: 10, left: 85, size: 120, fadeInDuration: 5500, backgroundImage: Planet6 },
   
-    // Frontend
-    { id: 7, text: 'HTML', icon: <FaHtml5 style={{ color: '#E34F26' }} />, top: 5, left: 50, size: 70, fadeInDuration: 1000, backgroundImage: Planet7 },
-    { id: 8, text: 'CSS', icon: <FaCss3Alt style={{ color: '#1572B6' }} />, top: 15, left: 70, size: 65, fadeInDuration: 1200, backgroundImage: Planet8 },
-    { id: 9, text: 'React', icon: <FaReact style={{ color: '#61DAFB' }} />, top: 25, left: 90, size: 75, fadeInDuration: 1400, backgroundImage: Planet9 },
-    { id: 10, text: 'Angular', icon: <FaAngular style={{ color: '#DD0031' }} />, top: 35, left: 20, size: 80, fadeInDuration: 1600, backgroundImage: Planet10 },
-    { id: 11, text: 'Tailwind CSS', icon: <SiTailwindcss style={{ color: '#38B2AC' }} />, top: 45, left: 40, size: 70, fadeInDuration: 1800, backgroundImage: Planet11 },
+    // // Frontend
+    { id: 7, text: 'HTML', icon: <FaHtml5 style={{ color: '#E34F26' }} />, top: 17, left: 10, size: 120, fadeInDuration: 11500, backgroundImage: Planet7 },
+    { id: 8, text: 'CSS', icon: <FaCss3Alt style={{ color: '#1572B6' }} />, top: 22, left: 25, size: 120, fadeInDuration: 10500, backgroundImage: Planet8 },
+    { id: 9, text: 'React', icon: <FaReact style={{ color: '#61DAFB' }} />, top: 17, left: 40, size: 120, fadeInDuration: 9500, backgroundImage: Planet9 },
+    { id: 10, text: 'Angular', icon: <FaAngular style={{ color: '#DD0031' }} />, top: 22, left: 55, size: 120, fadeInDuration: 8500, backgroundImage: Planet10 },
+    { id: 11, text: 'Tailwind CSS', icon: <SiTailwindcss style={{ color: '#38B2AC' }} />, top: 17, left: 70, size: 120, fadeInDuration: 7500, backgroundImage: Planet11 },
   
-    // Backend
-    { id: 12, text: 'Node.js', icon: <FaNodeJs style={{ color: '#339933' }} />, top: 55, left: 60, size: 75, fadeInDuration: 1000, backgroundImage: Planet12 },
-    { id: 13, text: 'Express.js', icon: <SiExpress style={{ color: '#000000' }} />, top: 65, left: 80, size: 70, fadeInDuration: 1200, backgroundImage: Planet13 },
-    { id: 14, text: 'Nest.js', icon: <SiNestjs style={{ color: '#E0234E' }} />, top: 75, left: 30, size: 85, fadeInDuration: 1400, backgroundImage: Planet14 },
+    // // Backend
+    { id: 12, text: 'Node.js', icon: <FaNodeJs style={{ color: '#339933' }} />, top: 22, left: 85, size: 120, fadeInDuration: 6500, backgroundImage: Planet12 },
+    { id: 13, text: 'Express.js', icon: <SiExpress style={{ color: '#000000' }} />, top: 29, left: 10, size: 120, fadeInDuration: 12500, backgroundImage: Planet13 },
+    { id: 14, text: 'Nest.js', icon: <SiNestjs style={{ color: '#E0234E' }} />, top: 34, left: 25, size: 120, fadeInDuration: 13500, backgroundImage: Planet14 },
   
-    // Databases
-    { id: 15, text: 'PostgreSQL', icon: <SiPostgresql style={{ color: '#336791' }} />, top: 5, left: 20, size: 75, fadeInDuration: 1000, backgroundImage: Planet15 },
-    { id: 16, text: 'MongoDB', icon: <SiMongodb style={{ color: '#47A248' }} />, top: 15, left: 40, size: 70, fadeInDuration: 1200, backgroundImage: Planet16 },
-    { id: 17, text: 'Firebase', icon: <SiFirebase style={{ color: '#FFCA28' }} />, top: 25, left: 60, size: 85, fadeInDuration: 1400, backgroundImage: Planet17 },
+    // // Databases
+    { id: 15, text: 'PostgreSQL', icon: <SiPostgresql style={{ color: '#336791' }} />, top: 29, left: 40, size: 120, fadeInDuration: 14500, backgroundImage: Planet15 },
+    { id: 16, text: 'MongoDB', icon: <SiMongodb style={{ color: '#47A248' }} />, top: 34, left: 55, size: 120, fadeInDuration: 15500, backgroundImage: Planet16 },
+    { id: 17, text: 'Firebase', icon: <SiFirebase style={{ color: '#FFCA28' }} />, top: 29, left: 70, size: 120, fadeInDuration: 16500, backgroundImage: Planet17 },
   
-    // Cloud & DevOps
-    { id: 18, text: 'AWS', icon: <FaAws style={{ color: '#FF9900' }} />, top: 35, left: 80, size: 85, fadeInDuration: 1000, backgroundImage: Planet18 },
-    { id: 19, text: 'Docker', icon: <FaDocker style={{ color: '#2496ED' }} />, top: 45, left: 10, size: 70, fadeInDuration: 1400, backgroundImage: Planet19 },
+    // // Cloud & DevOps
+    { id: 18, text: 'AWS', icon: <FaAws style={{ color: '#FF9900' }} />, top: 34, left: 85, size: 120, fadeInDuration: 17500, backgroundImage: Planet18 },
+    { id: 19, text: 'Docker', icon: <FaDocker style={{ color: '#2496ED' }} />, top: 45, left: 25, size: 120, fadeInDuration: 18500, backgroundImage: Planet19 },
   
-    // Machine Learning
-    { id: 20, text: 'TensorFlow', icon: <SiTensorflow style={{ color: '#FF6F00' }} />, top: 5, left: 70, size: 85, fadeInDuration: 1000, backgroundImage: Planet20 },
+    // // // Machine Learning
+    { id: 20, text: 'TensorFlow', icon: <SiTensorflow style={{ color: '#FF6F00' }} />, top: 40, left: 40, size: 120, fadeInDuration: 19500, backgroundImage: Planet20 },
   
-    // Others
-    { id: 21, text: 'Figma', icon: <FaFigma style={{ color: '#F24E1E' }} />, top: 55, left: 90, size: 75, fadeInDuration: 1200, backgroundImage: Planet21 },
-    { id: 22, text: 'Flutter', icon: <SiFlutter style={{ color: '#02569B' }} />, top: 65, left: 50, size: 75, fadeInDuration: 1800, backgroundImage: Planet22 },
+    // // Others
+    { id: 21, text: 'Figma', icon: <FaFigma style={{ color: '#F24E1E' }} />, top: 45, left: 55, size: 120, fadeInDuration: 20500, backgroundImage: Planet21 },
+    { id: 22, text: 'Flutter', icon: <SiFlutter style={{ color: '#02569B' }} />, top: 40, left: 70, size: 120, fadeInDuration: 21500, backgroundImage: Planet22 },
   ];
+  
   ;
   
   
