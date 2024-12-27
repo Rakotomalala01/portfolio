@@ -1,7 +1,20 @@
 import Education from "@/components/ui/education";
-import React, { useState } from "react";
+import EducationGalaxy from "@/components/ui/education-galaxy";
+import SkillsGalaxy from "@/components/ui/skills-galaxy";
+import  { useMemo, useState } from "react";
 
 const About = () => {
+  const stars = useMemo(() => {
+    const starArray = [];
+    for (let i = 0; i < 50; i++) {
+      starArray.push({
+        id: i,
+        top: Math.random() * 100,
+        left: Math.random() * 100,
+      });
+    }
+    return starArray;
+  }, []); // Empty dependency array ensures this runs only once
   const [activeTab, setActiveTab] = useState<"education" | "skills">("education");
   const aboutDescription =
     "Here is my Education and Skills to learn more about my academic background and professional expertise.";
@@ -48,10 +61,10 @@ const About = () => {
           </div>
         </div>
           {activeTab === "education" ? (
-            <Education/>
+            <EducationGalaxy stars={stars}/>
             
           ) : (
-            <p>Here are my professional skills...</p>
+            <SkillsGalaxy/>
           )}
     </section>
   );
