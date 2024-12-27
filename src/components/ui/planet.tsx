@@ -23,7 +23,7 @@ const Planet: FC<PlanetProps> = ({
   icon,
   text,
   fadeInDuration = 1000,
-  customShadow = '',
+  customShadow = 'var(--shadow-blue-strong)',
 }) => {
   const backgroundStyle = backgroundImage
     ? { backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover' }
