@@ -64,7 +64,7 @@ const About = () => {
             <EducationGalaxy stars={stars}/>
             
           ) : (
-            <SkillsGalaxy/>
+            <SkillsGalaxy stars={stars}/>
           )}
     </section>
   );
