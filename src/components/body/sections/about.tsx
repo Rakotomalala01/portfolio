@@ -9,15 +9,17 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-secondary text-foreground py-16 px-6 md:px-12 lg:px-20 z-[20]"
+      className="bg-secondary text-foreground py-16 z-[20]"
     >
-      <div className="mx-auto max-w-4xl text-center">
+      <div className="mx-auto max-w-4xl px-6 md:px-12 lg:px-20 text-center">
         <h2 className="text-3xl md:text-4xl font-blackops text-white mb-6">
           About Me
         </h2>
         <p className="text-sm md:text-xl font-light text-muted-foreground mb-6">
           {aboutDescription}
         </p>
+      </div>
+      
 
         <div className="relative flex items-center justify-center mb-8">
           <div className="relative flex w-full max-w-[300px] md:max-w-[400px] [box-shadow:var(--shadow-blue-strong)]">
@@ -51,7 +53,6 @@ const About = () => {
           ) : (
             <p>Here are my professional skills...</p>
           )}
-      </div>
     </section>
   );
 };
