@@ -2,7 +2,7 @@ import { Link } from "react-scroll";
 import MobileHeader from "./Mobile-header";
 
 const Header = () => {
-  const linkStyles = "hover:text-keyword text-white transition-colors duration-300 ease-in-out hover:[box-shadow:var(--shadow-blue-strong)] px-3";
+  const linkStyles = "hover:text-keyword text-white transition-colors duration-300 ease-in-out hover:[box-shadow:var(--shadow-blue-strong)] px-3 cursor-pointer";
   return (
     <header className="sticky top-0 z-50 bg-background [box-shadow:var(--shadow-blue-strong)]">
 
