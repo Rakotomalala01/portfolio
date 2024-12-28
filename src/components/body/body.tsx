@@ -1,6 +1,7 @@
 import HomeSection from "./sections/home-section";
 import About from "./sections/about";
 import FallingDots from "../ui/falling-dot";
+import ProjectsSection from "./sections/project";
 
 const Body = () => {
   const colors = [
@@ -34,6 +35,8 @@ const Body = () => {
 
       {/* About Section */}
        <About/>
+
+       <ProjectsSection/>
 
       {/* Portfolio Section */}
       <section id="portfolio" className="bg-gray-100 dark:bg-gray-900 py-12">

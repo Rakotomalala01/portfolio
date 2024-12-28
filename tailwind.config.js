@@ -36,6 +36,7 @@ export default {
 			DEFAULT: 'hsl(var(--secondary))',
 			foreground: 'hsl(var(--secondary-foreground))'
 		  },
+
 		  
 		  secondary: {
 			DEFAULT: 'hsl(var(--secondary))',
@@ -66,6 +67,8 @@ export default {
 		  /* Syntax Highlighting */
 		  keyword: 'hsl(var(--keyword))',
 		  institution: 'hsl(var(--institution-color))',
+		  third: 'hsl(var(--third))',
+		 
 
 		  function: 'hsl(var(--function))',
 		  variable: 'hsl(var(--variable))',
