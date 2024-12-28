@@ -1,4 +1,3 @@
-import Education from "@/components/ui/education";
 import EducationGalaxy from "@/components/ui/education-galaxy";
 import SkillsGalaxy from "@/components/ui/skills-galaxy";
 import  { useMemo, useState } from "react";
