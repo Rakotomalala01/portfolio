@@ -59,9 +59,6 @@ const Body = () => {
       <div className=" relative h-[100px] bg-gradient-to-b from-[#1a1d29] to-[#244071]">
         <MovingCloud zIndex={5}/>
       </div>
-
-
-
       
       <WorkExperience/>
 

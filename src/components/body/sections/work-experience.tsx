@@ -4,8 +4,8 @@ import React from "react";
 const WorkExperience: React.FC = () => {
   return (
       <section
-        id="sunset-horizon"
-        className="relative min-h-screen text-white bg-cover bg-center bg-no-repeat"
+        id="work-experiences"
+        className="relative text-white bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${Planet1})`, // Add the background image here
         }}
@@ -16,6 +16,14 @@ const WorkExperience: React.FC = () => {
         {/* Content */}
         <div className="relative z-10 text-center p-10">
           <h2 className="text-4xl font-bold mb-4">Sunset Horizon</h2>
+          <p className="text-lg">Explore the transition from day to night.</p>
+          <h2 className="text-4xl font-bold mb-4">Sunset Horizon</h2>
+          <p className="text-lg">Explore the transition from day to night.</p>          <h2 className="text-4xl font-bold mb-4">Sunset Horizon</h2>
+          <p className="text-lg">Explore the transition from day to night.</p>          <h2 className="text-4xl font-bold mb-4">Sunset Horizon</h2>
+     
+          <p className="text-lg">Explore the transition from day to night.</p>          <h2 className="text-4xl font-bold mb-4">Sunset Horizon</h2>
+          <p className="text-lg">Explore the transition from day to night.</p>          <h2 className="text-4xl font-bold mb-4">Sunset Horizon</h2>
+          <p className="text-lg">Explore the transition from day to night.</p>          <h2 className="text-4xl font-bold mb-4">Sunset Horizon</h2>
           <p className="text-lg">Explore the transition from day to night.</p>
         </div>
       </section>

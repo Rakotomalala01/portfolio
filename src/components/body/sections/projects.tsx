@@ -1,9 +1,9 @@
 import { Button } from '@/components/ui/button';
 import MovingCloud from '@/components/ui/MovingCloud';
 import React from 'react';
-import { FaRocket, FaReact, FaCss3Alt, FaHtml5, FaAngular, FaDocker, FaFigma, FaNodeJs, FaPython, FaRaspberryPi, FaFileCode, FaFileAlt, FaRProject, FaProjectDiagram, FaBriefcase } from 'react-icons/fa'; // Add more icons as needed
+import {  FaReact, FaAngular, FaDocker, FaFigma, FaNodeJs, FaPython, FaBriefcase} from 'react-icons/fa'; // Add more icons as needed
 import { MdOutlineTerminal } from 'react-icons/md';
-import { SiCplusplus, SiDart, SiFlutter, SiMongodb, SiNestjs, SiPostgresql, SiTailwindcss, SiTypescript } from 'react-icons/si';
+import { SiCplusplus, SiDart, SiFlutter, SiMongodb, SiMysql, SiNestjs, SiTypescript } from 'react-icons/si';
 
 type Project = {
   title: string;
@@ -18,8 +18,9 @@ const projects = [
     description:
       'Developed a conversational agent to answer recurring user questions about security using Microsoft Azure, Node.js, PostgreSQL, Docker, and Copilot.',
     tech: [
+      <FaReact/>,
       <FaNodeJs />,
-      <SiPostgresql />,
+      <SiMysql />,
       <FaDocker />,
     ],
   },
@@ -83,7 +84,7 @@ const ProjectsSection: React.FC = () => {
 
     <div className="mx-auto max-w-6xl px-4 md:px-8 lg:px-12 text-center">
       <h2 className="text-3xl md:text-4xl font-blackops text-white mb-6">
-        About Me
+        Projects
       </h2>
       <p className="text-sm md:text-lg font-light text-muted-foreground mb-6">
         {projectsDescription}
@@ -94,8 +95,8 @@ const ProjectsSection: React.FC = () => {
       {projects.map((project: Project, index: number) => (
         <div key={index} className={cardStyles}>
           <div className="p-4">
-            <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-            <p className="text-gray-400 text-sm mb-4">{project.description}</p>
+            <h3 className="text-xl font-blackops tracking-wider mb-3">{project.title}</h3>
+            <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
 
             <div className="flex justify-center items-center gap-3 text-lg mb-3">
               {project.tech.map((icon: JSX.Element, idx: number) => (
