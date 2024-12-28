@@ -233,13 +233,13 @@ const CarouselPreviousV2 = React.forwardRef<
     <>
       <style>
         {`
-          @keyframes bounce-x {
+          @keyframes bounce-x-left {
             0%, 100% {
               transform: translateX(0);
               animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
             }
             50% {
-              transform: translateX(20px);
+              transform: translateX(-20px);
               animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
             }
           }
@@ -257,7 +257,7 @@ const CarouselPreviousV2 = React.forwardRef<
         disabled={!canScrollPrev}
         onClick={scrollPrev}
         {...props}
-        style={{ animation: 'bounce-x 1s infinite' }}
+        style={{ animation: 'bounce-x-left 1s infinite' }}
 
       >
         <MdOutlineKeyboardArrowLeft 
@@ -312,7 +312,7 @@ return (
   <>
     <style>
       {`
-        @keyframes bounce-x {
+        @keyframes bounce-x-right {
           0%, 100% {
             transform: translateX(0);
             animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
@@ -336,7 +336,7 @@ return (
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
-      style={{ animation: 'bounce-x 1s infinite' }}
+      style={{ animation: 'bounce-x-right 1s infinite' }}
 
     >
       <MdOutlineKeyboardArrowRight 
