@@ -2,6 +2,8 @@ import HomeSection from "./sections/home-section";
 import About from "./sections/about";
 import FallingDots from "../ui/falling-dot";
 import ProjectsSection from "./sections/projects";
+import WorkExperience from "./sections/work-experience";
+import MovingCloud from "../ui/MovingCloud";
 
 const Body = () => {
   const colors = [
@@ -25,6 +27,19 @@ const Body = () => {
   return (
     <main className="w-full mx-auto py-8  w-full">
       {/* Home Section */}
+      <style>
+            {`
+          @keyframes cloudMove {
+            0% { transform: translateX(-10%); }
+            100% { transform: translateX(100vw); }
+          }
+  
+          .animate-cloudMove {
+            animation: cloudMove 1s linear infinite;
+          }
+        `}
+      </style>
+      
       <FallingDots colors={colors} count={60} />
 
 
@@ -34,15 +49,24 @@ const Body = () => {
 
 
       {/* About Section */}
-       <About/>
+      <About/>
       
-       <div className="h-[100px] bg-gradient-to-b from-[hsl(222,36%,10%)] to-[#0b132b]"></div>
+      <div className="h-[100px] bg-gradient-to-b from-[hsl(222,36%,10%)] to-[#0b132b]"></div>
 
 
-       <ProjectsSection/>
+      <ProjectsSection/>
+
+      <div className=" relative h-[100px] bg-gradient-to-b from-[#1a1d29] to-[#244071]">
+        <MovingCloud zIndex={5}/>
+      </div>
+
+
+
+      
+      <WorkExperience/>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="bg-gray-100 dark:bg-gray-900 py-12">
+      <section id="portfolio" className="bg-black dark:bg-gray-900 py-12">
         <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-white">
           My Work
         </h2>
