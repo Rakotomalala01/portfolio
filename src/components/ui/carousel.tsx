@@ -3,7 +3,7 @@ import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react"
 import { ArrowLeft, ArrowRight } from "lucide-react"
-
+import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight, MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
@@ -221,6 +221,56 @@ const CarouselPrevious = React.forwardRef<
 })
 CarouselPrevious.displayName = "CarouselPrevious"
 
+const CarouselPreviousV2 = React.forwardRef<
+  HTMLButtonElement,
+  React.ComponentProps<typeof Button>
+>(({ className, ...props }, ref) => {
+  const prevV2Styles = "hover:text-keyword text-white transition-colors duration-500 ease-in-out cursor-pointer";
+
+  const { orientation, scrollPrev, canScrollPrev } = useCarousel()
+
+  return (
+    <>
+      <style>
+        {`
+          @keyframes bounce-x {
+            0%, 100% {
+              transform: translateX(0);
+              animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            }
+            50% {
+              transform: translateX(20px);
+              animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+            }
+          }
+        `}
+      </style>
+      <button
+        ref={ref}
+        className={cn(
+          "absolute h-8 w-8 rounded-full",
+          orientation === "horizontal"
+            ? "-left-14 top-1/2 -translate-y-1/2"
+            : "-top-14 left-1/2 -translate-x-1/2 rotate-90",
+          className
+        )}
+        disabled={!canScrollPrev}
+        onClick={scrollPrev}
+        {...props}
+        style={{ animation: 'bounce-x 1s infinite' }}
+
+      >
+        <MdOutlineKeyboardArrowLeft 
+        className={`h-8 w-8 hover:[box-shadow:var(--shadow-blue-strong)] rounded-full ${prevV2Styles}`}
+
+      />
+        <span className="sr-only">Next slide</span>
+      </button>
+    </>
+  )
+})
+CarouselPrevious.displayName = "CarouselPreviousV2"
+
 const CarouselNext = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
@@ -250,6 +300,58 @@ const CarouselNext = React.forwardRef<
 })
 CarouselNext.displayName = "CarouselNext"
 
+const CarouselNextV2 = React.forwardRef<
+HTMLButtonElement,
+React.ComponentProps<typeof Button>
+>(({ className, ...props }, ref) => {
+const prevV2Styles = "hover:text-keyword text-white transition-colors duration-500 ease-in-out cursor-pointer";
+
+const { orientation, scrollNext, canScrollNext } = useCarousel()
+
+return (
+  <>
+    <style>
+      {`
+        @keyframes bounce-x {
+          0%, 100% {
+            transform: translateX(0);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+          }
+          50% {
+            transform: translateX(20px);
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+          }
+        }
+      `}
+    </style>
+    <button
+      ref={ref}
+      className={cn(
+        "absolute h-8 w-8 rounded-full",
+        orientation === "horizontal"
+          ? "-right-14 top-1/2 -translate-y-1/2"
+          : "-bottom-14 left-1/2 -translate-x-1/2 rotate-90",
+        className
+      )}
+      disabled={!canScrollNext}
+      onClick={scrollNext}
+      {...props}
+      style={{ animation: 'bounce-x 1s infinite' }}
+
+    >
+      <MdOutlineKeyboardArrowRight 
+      className={`h-8 w-8 hover:[box-shadow:var(--shadow-blue-strong)] rounded-full ${prevV2Styles}`}
+
+    />
+      <span className="sr-only">Next slide</span>
+    </button>
+  </>
+)
+})
+CarouselNext.displayName = "CarouselNextV2"
+
+
+
 export {
   type CarouselApi,
   Carousel,
@@ -257,4 +359,6 @@ export {
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
+  CarouselNextV2, 
+  CarouselPreviousV2
 }
