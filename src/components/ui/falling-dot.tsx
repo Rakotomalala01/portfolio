@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 interface FallingDotsProps {
   colors: string[];
@@ -12,13 +12,15 @@ const FallingDots: React.FC<FallingDotsProps> = ({
   const [colorIndex, setColorIndex] = useState(0);
   const [pageHeight, setPageHeight] = useState(0); // Track the total scrollable height
 
-  // Generate initial dot positions
-  const [positions] = useState(() =>
-    [...Array(count)].map(() => ({
-      left: Math.random() * 100, // Random horizontal position
-      duration: Math.random() * 15 + 10, // Random fall speed
-      delay: Math.random() * 5, // Random delay
-    }))
+  // Memoize positions to calculate only once
+  const positions = useMemo(
+    () =>
+      Array.from({ length: count }, () => ({
+        left: Math.random() * 100, // Random horizontal position
+        duration: Math.random() * 15 + 10, // Random fall speed
+        delay: Math.random() * 5, // Random delay
+      })),
+    [count]
   );
 
   // Update the page height dynamically
@@ -28,12 +30,8 @@ const FallingDots: React.FC<FallingDotsProps> = ({
     };
 
     updatePageHeight();
-    window.addEventListener("resize", updatePageHeight); // Update height on resize
-    window.addEventListener("scroll", updatePageHeight); // Update height when content changes
-    return () => {
-      window.removeEventListener("resize", updatePageHeight);
-      window.removeEventListener("scroll", updatePageHeight);
-    };
+    window.addEventListener("resize", updatePageHeight);
+    return () => window.removeEventListener("resize", updatePageHeight);
   }, []);
 
   // Cycle through colors
@@ -50,11 +48,7 @@ const FallingDots: React.FC<FallingDotsProps> = ({
       {positions.map((pos, i) => (
         <div
           key={i}
-          className={`
-            absolute w-2 h-2 rounded-full shadow-lg animate-fall 
-            transition-colors duration-1000 
-            ${colors[colorIndex]}
-          `}
+          className={`absolute w-2 h-2 rounded-full shadow-lg animate-fall transition-colors duration-1000 ${colors[colorIndex]}`}
           style={{
             top: "0%",
             left: `${pos.left}%`,
@@ -63,13 +57,14 @@ const FallingDots: React.FC<FallingDotsProps> = ({
           }}
         />
       ))}
+
       <style>
         {`
           @keyframes fall {
             0%   { transform: translateY(0); opacity: 0; }
             10%  { opacity: 1; }
             90%  { opacity: 1; }
-            100% { transform: translateY(${pageHeight}px); opacity: 0; } /* Use dynamic page height */
+            100% { transform: translateY(${pageHeight}px); opacity: 0; }
           }
           @keyframes shimmer {
             0%   { filter: hue-rotate(0deg); }
