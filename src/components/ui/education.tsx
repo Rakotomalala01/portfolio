@@ -22,13 +22,20 @@ const educationData: EducationItem[] = [
         year: ''
     },
     {
-        year: "",
         degree: "Preparatory Class for Engineering Schools in Math, Physics, and Engineering Science",
         institution: "Lycée Ste Croix St Euverte",
         description: "Prepared for advanced engineering studies with a focus on mathematics, physics, and engineering sciences.",
-        location: "france"
-      }, 
+        location: "france",
+        year: '',
 
+      }, 
+    {
+      degree: "Scientific Baccalaureate",
+      institution: "Collège St Michel Amparibe",
+      description: "Focused on mathematics, physics, and natural sciences in the scientific stream.",
+      location: "madagascar",
+      year: ''
+    },
   ]
   
 
@@ -47,9 +54,10 @@ const getGeographicalShape = (location: string) => {
   
     // Define specific styles for each location
     const styles: Record<string, string> = {
-      madagascar: "w-32 h-32", 
-      france: "w-[7rem] h-[7rem]",       
-      canada: "w-[7rem] h-[7rem]",         // Canada style
+      madagascar: "w-[0rem] h-[0rem] sm:w-[10rem] sm:h-[10rem]",
+      france: "w-[0rem] h-[0rem] sm:w-[7rem] sm:h-[7rem]",
+      canada: "w-[0rem] h-[0rem] sm:w-[7rem] sm:h-[7rem]",
+      
     };
   
     switch (location) {
@@ -73,7 +81,7 @@ const getGeographicalShape = (location: string) => {
       <div
         className={`relative  flex items-center justify-center  ${styleClass}`}
       >
-        <Icon className="w-full h-full" />
+        <Icon className="w-full h-full "/>
       </div>
     );
   };

@@ -47,10 +47,8 @@ const Planet: FC<PlanetProps> = ({
     <>
       <style>{animations}</style>
       <div
-        className="absolute flex flex-col items-center justify-center rounded-full"
+        className="flex flex-col items-center justify-center rounded-full"
         style={{
-          top: `${top}%`,
-          left: `${left}%`,
           width: `${size}px`,
           height: `${size}px`,
           ...backgroundStyle,

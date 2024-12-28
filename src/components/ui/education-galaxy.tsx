@@ -13,7 +13,7 @@ interface EducationGalaxyProps {
 
 const EducationGalaxy: FC<EducationGalaxyProps> = ({ stars }) => {
   return (
-    <div className="relative h-[115vh] bg-secondary overflow-hidden">
+    <div className="relative h-[1200px] bg-secondary overflow-hidden">
       {/* Stars */}
       {stars.map((star) => (
         <div
