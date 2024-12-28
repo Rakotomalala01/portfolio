@@ -38,7 +38,7 @@ const Header = () => {
             offset={-70}
             className={`${linkStyles}`}
           >
-            Project
+            Projects
           </Link>
           <Link
             to="contact"

@@ -61,7 +61,7 @@ const MobileHeader = () => {
               offset={-70}
               className={`${mobileLinkStyles}`}
             >
-              Project
+              Projects
             </Link>
           </SheetClose>
           <SheetClose asChild>
