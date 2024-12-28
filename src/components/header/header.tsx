@@ -32,7 +32,7 @@ const Header = () => {
             About
           </Link>
           <Link
-            to="project"
+            to="projects"
             smooth={true}
             duration={100}
             offset={-70}

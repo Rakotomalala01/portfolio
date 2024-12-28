@@ -1,7 +1,7 @@
 import HomeSection from "./sections/home-section";
 import About from "./sections/about";
 import FallingDots from "../ui/falling-dot";
-import ProjectsSection from "./sections/project";
+import ProjectsSection from "./sections/projects";
 
 const Body = () => {
   const colors = [
@@ -35,6 +35,9 @@ const Body = () => {
 
       {/* About Section */}
        <About/>
+      
+       <div className="h-[100px] bg-gradient-to-b from-[hsl(222,36%,10%)] to-[#0b132b]"></div>
+
 
        <ProjectsSection/>
 
