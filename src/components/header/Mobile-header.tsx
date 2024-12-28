@@ -66,7 +66,7 @@ const MobileHeader = () => {
           </SheetClose>
           <SheetClose asChild>
             <Link
-              to="contact"
+              to="work-experiences"
               smooth={true}
               duration={500}
               offset={-70}

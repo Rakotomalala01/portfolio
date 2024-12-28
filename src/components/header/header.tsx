@@ -41,13 +41,13 @@ const Header = () => {
             Projects
           </Link>
           <Link
-            to="contact"
+            to="work-experiences"
             smooth={true}
             duration={100}
             offset={-400}
             className={`${linkStyles}`}
           >
-            Work Experience
+            Work Experiences
           </Link>
           <Link
             to="rewards"
