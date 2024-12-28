@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 
 interface PlanetProps {
   top: number;
@@ -14,8 +14,6 @@ interface PlanetProps {
 }
 
 const Planet: FC<PlanetProps> = ({
-  top,
-  left,
   size = 50,
   color = '#3498db',
   backgroundImage,

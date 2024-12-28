@@ -13,7 +13,7 @@ const About = () => {
       });
     }
     return starArray;
-  }, []); // Empty dependency array ensures this runs only once
+  }, []); 
   const [activeTab, setActiveTab] = useState<"education" | "skills">("education");
   const aboutDescription =
     "Here is my Education and Skills to learn more about my academic background and professional expertise.";

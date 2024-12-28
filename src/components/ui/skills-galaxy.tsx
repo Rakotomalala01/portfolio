@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import  { FC } from 'react';
 import Planet from './planet';
 import Planet1 from '../../../docs/assets/img/planet_1.png';
 import Planet2 from '../../../docs/assets/img/planet_2.png';
@@ -40,12 +40,9 @@ import {
   FaCode,
   FaDatabase,
   FaLaptopCode,
-  FaRobot,
   FaServer,
-  FaTools
 } from 'react-icons/fa';
-import { cn } from '@/lib/utils';
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from './carousel';
+import { Carousel, CarouselContent, CarouselItem,  CarouselNextV2, CarouselPreviousV2 } from './carousel';
 import { Card, CardContent } from './card';
 
 interface Star {
@@ -204,8 +201,9 @@ const EducationGalaxy: FC<EducationGalaxyProps> = ({ stars }) => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPreviousV2 className='text-white' />
+              <CarouselNextV2/>
+
             </Carousel>
           </div>
         );
