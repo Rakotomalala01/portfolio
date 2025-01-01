@@ -2,8 +2,8 @@ import HomeSection from "./sections/home-section";
 import About from "./sections/about";
 import FallingDots from "../ui/falling-dot";
 import ProjectsSection from "./sections/projects";
-import WorkExperience from "./sections/work-experience";
 import MovingCloud from "../ui/MovingCloud";
+import Practice from "./sections/Practice";
 
 const Body = () => {
   const colors = [
@@ -60,7 +60,7 @@ const Body = () => {
         <MovingCloud zIndex={5}/>
       </div>
       
-      <WorkExperience/>
+      <Practice />
 
       {/* Portfolio Section */}
       <section id="portfolio" className="bg-black dark:bg-gray-900 py-12">

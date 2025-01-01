@@ -1,10 +1,10 @@
 import Planet1 from '../../../../docs/assets/img/City_view.webp';
 import React from "react";
 
-const WorkExperience: React.FC = () => {
+const Practice : React.FC = () => {
   return (
       <section
-        id="work-experiences"
+        id="practice"
         className="relative text-white bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${Planet1})`, // Add the background image here
@@ -30,4 +30,4 @@ const WorkExperience: React.FC = () => {
   );
 };
 
-export default WorkExperience;
+export default Practice ;
