@@ -23,7 +23,7 @@ const Practice: React.FC = () => {
   ];
   
   const cardStyles =
-    "bg-gradient-to-b from-[#243B55] via-[#3B4371] to-[#1e3c72] rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:[box-shadow:var(--shadow-blue-strong)] shadow-md p-4";
+    "bg-gradient-to-b from-[#243B55] via-[#3B4371] to-[#1e3c72] rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:[box-shadow:var(--shadow-blue-strong)] shadow-md p-4 ";
 
   const practiceDescription =
     "Hands-on experience through internships, certifications, and applied skills.";
@@ -39,7 +39,7 @@ const Practice: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-[#1e3c72] via-[#4e4376] to-[#2b5876] opacity-[95%]"></div>
 
       <div className="relative z-10 p-10">
-        <h2 className="text-3xl md:text-4xl font-blackops text-white mb-6">
+        <h2 className="text-3xl md:text-4xl font-blackops text-white mb-6  tracking-wider">
           Practice
         </h2>
         <p className="text-sm md:text-lg font-light text-muted-foreground mb-6">
@@ -62,7 +62,13 @@ const Practice: React.FC = () => {
                     href={practice.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 inline-block text-sm font-medium text-white bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600 transition"
+                    className="mt-4 inline-block text-sm font-medium text-white 
+                    bg-gradient-to-r from-[#4e4376] to-[#2b5876] 
+                    hover:from-[#2b5876] hover:to-[#4e4376] 
+                    px-4 py-2 rounded-lg transition 
+                    transform hover:scale-105 
+                    hover:[box-shadow:var(--shadow-blue-strong)]"
+         
                   >
                     View Certificate
                   </a>

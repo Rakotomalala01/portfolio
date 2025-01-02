@@ -76,17 +76,7 @@ const MobileHeader = () => {
 
             </Link>
           </SheetClose>
-          <SheetClose asChild>
-            <Link
-              to="rewards"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              className={`${mobileLinkStyles}`}
-            >
-              Rewards
-            </Link>
-          </SheetClose>
+      
           <SheetClose asChild>
             <Link
               to="contact"

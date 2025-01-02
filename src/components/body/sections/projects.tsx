@@ -78,12 +78,12 @@ const ProjectsSection: React.FC = () => {
   return (
     <section
     id="projects"
-    className="relative min-h-screen bg-gradient-to-b from-[#0b132b] to-[#1a1d29] text-white py-16 overflow-hidden z-[5]"
+    className="relative  bg-gradient-to-b from-[#0b132b] to-[#1a1d29] text-white py-16 overflow-hidden z-[5]"
   >
     <MovingCloud/>
 
     <div className="mx-auto max-w-6xl px-4 md:px-8 lg:px-12 text-center">
-      <h2 className="text-3xl md:text-4xl font-blackops text-white mb-6">
+      <h2 className="text-3xl md:text-4xl font-blackops text-white mb-6  tracking-wider">
         Projects
       </h2>
       <p className="text-sm md:text-lg font-light text-muted-foreground mb-6">

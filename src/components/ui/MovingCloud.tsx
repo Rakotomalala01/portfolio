@@ -11,8 +11,16 @@ const MovingCloud: React.FC<MovingCloudProps> = ({ zIndex = 0 }) => {
         {`
           @keyframes cloudMove {
             0% { transform: translateX(-10%); }
-            100% { transform: translateX(180vw); }
+            100% { transform: translateX(64vw); } /* Default for smaller screens */
           }
+
+          @media (min-width: 768px) { /* Medium screens (md) */
+            @keyframes cloudMove {
+              0% { transform: translateX(-10%); }
+              100% { transform: translateX(96vw); } /* Adjusted for tablets and larger screens */
+            }
+          }
+
   
           .animate-cloudMove {
             animation: cloudMove 45s linear infinite;

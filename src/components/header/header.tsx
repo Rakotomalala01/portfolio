@@ -49,15 +49,7 @@ const Header = () => {
           >
             Practice
           </Link>
-          <Link
-            to="rewards"
-            smooth={true}
-            duration={100}
-            offset={-70}
-            className={`${linkStyles}`}
-          >
-            Rewards
-          </Link>
+
           <Link
             to="contact"
             smooth={true}
