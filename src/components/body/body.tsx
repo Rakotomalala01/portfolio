@@ -3,8 +3,8 @@ import About from "./sections/about";
 import FallingDots from "../ui/falling-dot";
 import ProjectsSection from "./sections/projects";
 import MovingCloud from "../ui/MovingCloud";
-import Practice from "./sections/Practice";
 import Contact from "./sections/contact";
+import Practice from "./sections/practice";
 
 const Body = () => {
   const colors = [
