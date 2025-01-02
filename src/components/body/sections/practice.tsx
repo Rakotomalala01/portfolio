@@ -1,33 +1,79 @@
-import Planet1 from '../../../../docs/assets/img/City_view.webp';
 import React from "react";
+import Planet1 from '../../../../docs/assets/img/City_view.webp';
 
-const Practice : React.FC = () => {
+const Practice: React.FC = () => {
+  type Practice = {
+    title: string;
+    description: string;
+    link?: string; // Optional link for certifications
+  };
+
+  const practices: Practice[] = [
+    {
+      title: 'ORACLE FUSION DEVELOPER INTERN  Ville de Montreal',
+      description:
+        'Intern in SQL Oracle database using Oracle BI tools, delivering reports and integrations while collaborating with a team to achieve project objectives.',
+    },
+    {
+      title: 'Responsive Web Design',
+      description:
+        'Completed a certification program in responsive web design, focusing on modern HTML, CSS, and accessibility principles.',
+      link: 'https://www.freecodecamp.org/certification/fcc804a1616-cd20-46cf-9ffe-8c0db9e191ae/responsive-web-design',
+    },
+  ];
+  
+  const cardStyles =
+    "bg-gradient-to-b from-[#243B55] via-[#3B4371] to-[#1e3c72] rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:[box-shadow:var(--shadow-blue-strong)] shadow-md p-4";
+
+  const practiceDescription =
+    "Hands-on experience through internships, certifications, and applied skills.";
+
   return (
-      <section
-        id="practice"
-        className="relative text-white bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(${Planet1})`, // Add the background image here
-        }}
-      >
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1e3c72] via-[#4e4376] to-[#2b5876] opacity-[95%]"></div>
-        
-        {/* Content */}
-        <div className="relative z-10 text-center p-10">
-          <h2 className="text-4xl font-bold mb-4">Sunset Horizon</h2>
-          <p className="text-lg">Explore the transition from day to night.</p>
-          <h2 className="text-4xl font-bold mb-4">Sunset Horizon</h2>
-          <p className="text-lg">Explore the transition from day to night.</p>          <h2 className="text-4xl font-bold mb-4">Sunset Horizon</h2>
-          <p className="text-lg">Explore the transition from day to night.</p>          <h2 className="text-4xl font-bold mb-4">Sunset Horizon</h2>
-     
-          <p className="text-lg">Explore the transition from day to night.</p>          <h2 className="text-4xl font-bold mb-4">Sunset Horizon</h2>
-          <p className="text-lg">Explore the transition from day to night.</p>          <h2 className="text-4xl font-bold mb-4">Sunset Horizon</h2>
-          <p className="text-lg">Explore the transition from day to night.</p>          <h2 className="text-4xl font-bold mb-4">Sunset Horizon</h2>
-          <p className="text-lg">Explore the transition from day to night.</p>
+    <section
+      id="practice"
+      className="relative text-white bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url(${Planet1})`,
+      }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-[#1e3c72] via-[#4e4376] to-[#2b5876] opacity-[95%]"></div>
+
+      <div className="relative z-10 p-10">
+        <h2 className="text-3xl md:text-4xl font-blackops text-white mb-6">
+          Practice
+        </h2>
+        <p className="text-sm md:text-lg font-light text-muted-foreground mb-6">
+          {practiceDescription}
+        </p>
+
+        <div className="m-8 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {practices.map((practice, index) => (
+            <div key={index} className={cardStyles}>
+              <div className="p-4 ">
+                <h3 className="text-xl font-blackops tracking-wider mb-3">
+                  {practice.title}
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  {practice.description}
+                </p>
+
+                {practice.link && (
+                  <a
+                    href={practice.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-block text-sm font-medium text-white bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600 transition"
+                  >
+                    View Certificate
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
   );
 };
 
-export default Practice ;
+export default Practice;
