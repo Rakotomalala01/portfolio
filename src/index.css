@@ -71,15 +71,6 @@ html {
 }
 
 
-/* Light Mode Colors */
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: 0 0% 100%; /* White */
-    --foreground: 0 0% 10%; /* Dark gray */
-    --primary: 207 90% 55%; /* Blue */
-    --accent: 43 89% 70%; /* Yellow */
-  }
-}
 
 /* Body Styles */
 body {
