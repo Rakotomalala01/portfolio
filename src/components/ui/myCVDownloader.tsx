@@ -5,7 +5,7 @@ import { Button } from './button';
 const MyCVDownloader = () => {
   const handleViewResume = () => {
     window.open(
-      'https://drive.google.com/file/d/1zFnvevnw9UfXzCvg0FGzXYUflE5ZRweQ/view',
+      'https://drive.google.com/file/d/1OZOEoQMhdM-eqU5pEa20ELmj6yY7lMSA/view?usp=sharing',
       '_blank'
     );
   };

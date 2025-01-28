@@ -28,7 +28,7 @@ const ContactList = () => {
 
       {/* Email */}
       <a
-        href="mailto:johary.rakotomalala2001@gmail.com"
+        href="mailto:johary.rakotomalala.dev@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
         className={iconClass}
