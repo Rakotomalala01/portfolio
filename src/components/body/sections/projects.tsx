@@ -16,7 +16,7 @@ const projects = [
   {
     title: 'Conversational Agent',
     description:
-      'Developed a conversational agent to answer recurring user questions about security using Microsoft Azure, Node.js, PostgreSQL, Docker, and Copilot.',
+      'React, Node.js, SQL, MiniLM-L12-v2 Built for a real client, this system answers security-related queries, tracks KPIs, manages requests, and logs history.',
     tech: [
       <FaReact/>,
       <FaNodeJs />,
