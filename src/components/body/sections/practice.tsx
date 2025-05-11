@@ -20,6 +20,18 @@ const Practice: React.FC = () => {
         'Completed a certification program in responsive web design, focusing on modern HTML, CSS, and accessibility principles.',
       link: 'https://www.freecodecamp.org/certification/fcc804a1616-cd20-46cf-9ffe-8c0db9e191ae/responsive-web-design',
     },
+    {
+      title: 'Foundational C# with Microsoft',
+      description:
+        'Completed a foundational C# certification covering core programming concepts, object-oriented principles, and .NET basics through FreeCodeCamp and Microsoft collaboration.',
+      link: 'https://www.freecodecamp.org/certification/fcc804a1616-cd20-46cf-9ffe-8c0db9e191ae/foundational-c-sharp-with-microsoft',
+    },
+    {
+      title: 'Machine Learning with Python',
+      description:
+        'Earned a certification in machine learning using Python, covering supervised and unsupervised learning, model evaluation, and libraries like Scikit-learn and Pandas.',
+      link: 'https://www.freecodecamp.org/certification/fcc804a1616-cd20-46cf-9ffe-8c0db9e191ae/machine-learning-with-python',
+    },    
   ];
   
   const cardStyles =
