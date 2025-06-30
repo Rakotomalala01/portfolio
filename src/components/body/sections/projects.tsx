@@ -1,9 +1,9 @@
 import { Button } from '@/components/ui/button';
 import MovingCloud from '@/components/ui/MovingCloud';
 import React from 'react';
-import {  FaReact, FaAngular, FaDocker, FaFigma, FaNodeJs, FaPython, FaBriefcase} from 'react-icons/fa'; // Add more icons as needed
+import {  FaAngular, FaFigma, FaNodeJs, FaPython, FaBriefcase} from 'react-icons/fa'; // Add more icons as needed
 import { MdOutlineTerminal } from 'react-icons/md';
-import { SiCplusplus, SiDart, SiFlutter, SiMongodb, SiMysql, SiNestjs, SiTypescript } from 'react-icons/si';
+import { SiCplusplus, SiDart, SiFlutter, SiMongodb, SiNestjs, SiTypescript } from 'react-icons/si';
 
 type Project = {
   title: string;
