@@ -14,17 +14,6 @@ type Project = {
 
 const projects = [
   {
-    title: 'Conversational Agent',
-    description:
-      'React, Node.js, SQL, MiniLM-L12-v2 Built for a real client, this system answers security-related queries, tracks KPIs, manages requests, and logs history.',
-    tech: [
-      <FaReact/>,
-      <FaNodeJs />,
-      <SiMysql />,
-      <FaDocker />,
-    ],
-  },
-  {
     title: 'Difference Game Design Project',
     description:
       'Created an interactive cross-platform difference game using Angular, TypeScript, MongoDB, NestJS, Flutter, and Dart, optimizing the user experience to meet client requirements.',
