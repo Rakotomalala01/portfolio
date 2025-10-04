@@ -9,16 +9,7 @@ const Practice: React.FC = () => {
   };
 
   const practices: Practice[] = [
-    {
-      title: 'STUDENT SOFTWARE DEVELOPER CONSULTANT – Confidential Partner',
-      description:
-        'Collaborated on an AI proof of concept to automate internal queries using Mistral-7B and Sentence-BERT. Built key components of a full-stack web app with React, Node.js, and SQL Server, following agile sprints and client feedback.',
-    },
-    {
-      title: 'ORACLE FUSION DEVELOPER INTERN  Ville de Montreal',
-      description:
-        'Intern in SQL Oracle database using Oracle BI tools, delivering reports and integrations while collaborating with a team to achieve project objectives.',
-    },
+
     {
       title: 'Responsive Web Design',
       description:
