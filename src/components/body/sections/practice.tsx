@@ -10,7 +10,7 @@ const Practice: React.FC = () => {
 
   const practices: Practice[] = [
     {
-      title: 'STUDENT SOFTWARE DEVELOPER CONSULTANT – Desjardins',
+      title: 'STUDENT SOFTWARE DEVELOPER CONSULTANT – Confidential Partner',
       description:
         'Collaborated on an AI proof of concept to automate internal queries using Mistral-7B and Sentence-BERT. Built key components of a full-stack web app with React, Node.js, and SQL Server, following agile sprints and client feedback.',
     },

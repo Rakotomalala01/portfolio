@@ -27,14 +27,15 @@ const ContactList = () => {
       </a>
 
       {/* Email */}
-      <a
-        href="mailto:johary.rakotomalala.dev@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={iconClass}
-      >
-        <FaEnvelope className="h-5 w-5 sm:h-8 sm:w-8" />
-      </a>
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=johary.rakotomalala.dev@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={iconClass}
+        >
+          <FaEnvelope className="h-5 w-5 sm:h-8 sm:w-8" />
+        </a>
+
     </div>
   );
 };
