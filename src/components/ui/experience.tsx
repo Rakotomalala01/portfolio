@@ -52,13 +52,15 @@ const ExperienceTitle: FC = () => (
 
 type ExperienceItem = {
   title: string;
+  institution: string;
   period: string;
   bullets: string[];
 };
 
 const EXPERIENCES: ExperienceItem[] = [
   {
-    title: "Freelance Developer – Montréal, QC",
+    title: "Freelance Developer",
+    institution: "Independent – Montréal, QC",
     period: "January 2025 – Present",
     bullets: [
       "Designed and built full-stack web apps using React, Spring Boot, and Git.",
@@ -67,7 +69,8 @@ const EXPERIENCES: ExperienceItem[] = [
     ],
   },
   {
-    title: "Student Software Developer Consultant – Confidential Partner",
+    title: "Student Software Developer Consultant",
+    institution: "Confidential Partner – Montréal, QC",
     period: "August – December 2024",
     bullets: [
       "Built a full-stack proof-of-concept app using React, Node.js, MySQL, and Git in an Agile (Scrum) team setting.",
@@ -76,7 +79,8 @@ const EXPERIENCES: ExperienceItem[] = [
     ],
   },
   {
-    title: "Oracle Fusion Developer Intern – Ville de Montréal",
+    title: "Oracle Fusion Developer Intern",
+    institution: "Ville de Montréal – Montréal, QC",
     period: "September – December 2022",
     bullets: [
       "Queried and maintained Oracle SQL databases to support data integration and reporting workflows.",
@@ -153,13 +157,16 @@ const Experience: FC = () => {
               <h4 className="text-lg md:text-xl font-semibold text-white mb-1">
                 {exp.title}
               </h4>
+              <p className="text-institution font-semibold text-xs sm:text-sm mb-1">
+                {exp.institution}
+              </p>
               <p className="text-sm text-muted-foreground mb-3">
                 {exp.period}
               </p>
               <ul className="space-y-2 text-sm text-white/80">
                 {exp.bullets.map((b, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <IoPaperPlaneOutline className="mt-[2px] h-4 w-4 text-keyword shrink-0 rotate-45 mr-2 " />
+                    <IoPaperPlaneOutline className="mt-[2px] h-4 w-4 text-keyword shrink-0 rotate-90" />
                     <span>{highlightKeywords(b)}</span>
                   </li>
                 ))}

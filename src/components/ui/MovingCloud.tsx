@@ -33,9 +33,10 @@ const MovingCloud: React.FC<MovingCloudProps> = ({ zIndex = 0 }) => {
       >
         <div className="absolute top-20 left-[-15%] w-[250px] h-[60px] bg-white opacity-30 rounded-full blur-2xl animate-cloudMove"></div>
 
-        <div className="absolute top-1/4 left-[-20%] w-[250px] h-[70px] bg-white opacity-30 rounded-full blur-2xl animate-cloudMove delay-[2s]"></div>
-        <div className="absolute top-1/3 left-[-60%] w-[180px] h-[50px] bg-white opacity-30 rounded-full blur-2xl animate-cloudMove delay-[4s]"></div>
-        <div className="absolute top-[70%] left-[-30%] w-[220px] h-[60px] bg-white opacity-30 rounded-full blur-2xl animate-cloudMove delay-[6s]"></div>
+        <div className="absolute top-1/4 left-[-20%] w-[250px] h-[70px] bg-white opacity-30 rounded-full blur-2xl animate-cloudMove animation-delay-[2s]
+"></div>
+        <div className="absolute top-1/3 left-[-60%] w-[180px] h-[50px] bg-white opacity-30 rounded-full blur-2xl animate-cloudMove  animation-delay-[4s]"></div>
+        <div className="absolute top-[70%] left-[-30%] w-[220px] h-[60px] bg-white opacity-30 rounded-full blur-2xl animate-cloudMove  animation-delay-[6s]"></div>
       </div>
     </>
   );
