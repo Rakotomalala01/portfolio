@@ -26,7 +26,7 @@ const Practice: React.FC = () => {
       title: 'Machine Learning with Python',
       description:
         'Earned a certification in machine learning using Python, covering supervised and unsupervised learning, model evaluation, and libraries like Scikit-learn and Pandas.',
-      link: 'https://www.freecodecamp.org/certification/fcc804a1616-cd20-46cf-9ffe-8c0db9e191ae/machine-learning-with-python',
+      link: 'https://www.freecodecamp.org/certification/fcc804a1616-cd20-46cf-9ffe-8c0db9e191ae/machine-learning-with-python-v7',
     },    
   ];
   
