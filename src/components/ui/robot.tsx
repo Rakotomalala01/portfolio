@@ -95,16 +95,26 @@ const RobotHead: React.FC = () => {
       {/* Robot Head */}
       <div
         onClick={handleChatToggle}
-        className={`w-10 h-10 md:w-16 md:h-16 rounded-full shadow-lg border-4 border-gray-500 flex items-center justify-center transition-transform duration-1000 ease-in-out border-none ${
-          showSmile
-            ? `bg-gradient-to-br from-blue-600 via-blue-400 to-blue-100 cursor-pointer ${
-                !isAsleep ? '[box-shadow:var(--shadow-blue-strong)]' : ''
-              }`
-            : 'bg-gradient-to-br from-gray-300 via-gray-400 to-blue-500'
-        } ${isButtonDisabled ? 'cursor-not-allowed' : ''}`}
+        className={`
+          w-10 h-10 md:w-16 md:h-16 
+          rounded-full shadow-lg border-4 border-gray-500 
+          flex items-center justify-center 
+          transition-[transform,box-shadow] duration-1000 ease-in-out
+          hover:shadow-[0_0_30px_3px_hsl(var(--institution-color))]
+          border-none
+
+          ${
+            showSmile
+              ? `bg-gradient-to-br from-blue-600 via-blue-400 to-blue-100 cursor-pointer ${
+                  !isAsleep ? '[box-shadow:var(--shadow-blue-strong)]' : ''
+                }`
+              : 'bg-gradient-to-br from-gray-300 via-gray-400 to-blue-500'
+          }
+          ${isButtonDisabled ? 'cursor-not-allowed' : ''}
+        `}
         style={{ transform: `translateY(${position}px)` }}
-        
       >
+
         {isAsleep && <SleepEffect />}
 
         <div
