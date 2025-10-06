@@ -166,7 +166,7 @@ const Experience: FC = () => {
               <ul className="space-y-2 text-sm text-white/80">
                 {exp.bullets.map((b, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <IoPaperPlaneOutline className="mt-[2px] h-4 w-4 text-keyword shrink-0 rotate-90" />
+                    <IoPaperPlaneOutline className="mt-[2px] h-4 w-4 text-keyword shrink-0 mr-2 rotate-45" />
                     <span>{highlightKeywords(b)}</span>
                   </li>
                 ))}
