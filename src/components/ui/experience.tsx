@@ -59,13 +59,13 @@ type ExperienceItem = {
 
 const EXPERIENCES: ExperienceItem[] = [
   {
-    title: "Freelance Developer",
-    institution: "Independent – Montréal, QC",
+    title: "Fullstack Developer",
+    institution: "Independent Client – Montréal, QC",
     period: "January 2025 – Present",
     bullets: [
-      "Designed and built full-stack web apps using React, Spring Boot, and Git.",
-      "Integrated AI features using TensorFlow and NLP for proof-of-concept solutions.",
-      "Enabled clients to validate ideas quickly by delivering fast, testable MVPs tailored to real-world use cases.",
+    "Contributed to software planning, feature breakdown, and UI design using Figma, and REST-based full-stack development",
+    "Developed user interfaces (login, dashboards) and containerized services with React and Docker",
+    "Currently developing backend services and evaluating AI/NLP models with FastAPI (Python)",
     ],
   },
   {
